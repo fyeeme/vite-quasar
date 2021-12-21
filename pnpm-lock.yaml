@@ -11,6 +11,7 @@ specifiers:
   sass: 1.32.0
   typescript: ^4.5.4
   unocss: ^0.16.3
+  velocity-animate: ^1.5.2
   vite: ^2.7.2
   vite-plugin-pages: ^0.19.3
   vue: ^3.2.26
@@ -21,6 +22,7 @@ dependencies:
   axios: 0.24.0
   pinia: 2.0.6_typescript@4.5.4+vue@3.2.26
   quasar: 2.3.4
+  velocity-animate: 1.5.2
   vue: 3.2.26
   vue-router: 4.0.12_vue@3.2.26
 
@@ -1199,6 +1201,10 @@ packages:
       '@unocss/reset': 0.16.3
       '@unocss/vite': 0.16.3
     dev: true
+
+  /velocity-animate/1.5.2:
+    resolution: {integrity: sha1-WjUddfyiqSdW9cOGdUi4c/bDIQU=, tarball: velocity-animate/download/velocity-animate-1.5.2.tgz}
+    dev: false
 
   /vite-plugin-pages/0.19.3_vite@2.7.2:
     resolution: {integrity: sha512-hqnO4HppzHsm86y8cGGmMsoT4hHbl8hA+8x9G8XINJzwc9AtFdSOAbGRIkxcaTcidiAr8GxsIZgE935EZwDUaw==, tarball: vite-plugin-pages/download/vite-plugin-pages-0.19.3.tgz}

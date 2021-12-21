@@ -11,7 +11,10 @@ export default defineConfig({
     quasar({ sassVariables: 'src/assets/style/quasar-variables.sass' }),
     Pages({
       nuxtStyle: true,
-      exclude: ['**/blank/*.vue'],
+      dirs: [
+        { dir: 'src/pages', baseRoute: '' },
+        { dir: 'src/pages/blank', baseRoute: '' },
+      ],
     }),
     Unocss({
       presets: [presetUno()],
@@ -20,7 +23,7 @@ export default defineConfig({
   resolve: {
     alias: {
       src: resolve(__dirname, './src'),
-      '@': resolve(__dirname, './src'),
+      '/@': resolve(__dirname, './src'),
     },
   },
   server: {

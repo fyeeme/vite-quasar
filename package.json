@@ -11,6 +11,7 @@
     "axios": "^0.24.0",
     "pinia": "^2.0.6",
     "quasar": "^2.3.4",
+    "velocity-animate": "^1.5.2",
     "vue": "^3.2.26",
     "vue-router": "^4.0.12"
   },
