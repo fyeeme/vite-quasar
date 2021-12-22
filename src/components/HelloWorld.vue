@@ -1,9 +1,9 @@
 <script setup lang="ts">
   import { ref, toRefs } from 'vue'
   import { useRouter } from 'vue-router'
-  const props = defineProps({
-    msg: String,
-  })
+  const props = defineProps<{
+    msg: string
+  }>()
 
   const count = ref(0)
   const { msg } = toRefs(props)
@@ -50,12 +50,6 @@
     ">
     Dav
   </p>
-  <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-  </p>
 
   <p>
     <a href="https://vitejs.dev/guide/features.html" target="_blank"> Vite Documentation </a>
@@ -64,10 +58,6 @@
   </p>
 
   <q-btn color="primary mb-20px" icon="check" :label="'count is: ' + count" @click="count++" />
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
 </template>
 
 <style scoped>

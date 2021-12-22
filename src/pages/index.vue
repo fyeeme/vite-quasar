@@ -1,5 +1,5 @@
 <template>
-  <div class="column flex-center bg-true-gray-600">
+  <div class="column flex-center pa-4">
     <div class="before:content-['hello'] before:block ..."></div>
     <img alt="Vue logo" src="src/assets/img/logo.png" @click="getUser" />
     <HelloWorld msg="Hello Vue 3 + Vite" />
