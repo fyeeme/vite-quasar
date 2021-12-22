@@ -10,3 +10,7 @@
   const route = useRoute()
   const { all } = route.params
 </script>
+<route lang="yaml">
+meta:
+  layout: blank
+</route>

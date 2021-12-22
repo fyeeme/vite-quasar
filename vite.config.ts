@@ -4,6 +4,7 @@ import { quasar, transformAssetUrls } from '@quasar/vite-plugin'
 import vue from '@vitejs/plugin-vue'
 import Unocss from 'unocss/vite'
 import Pages from 'vite-plugin-pages'
+import Layouts from 'vite-plugin-vue-layouts'
 import { presetUno } from 'unocss'
 export default defineConfig({
   plugins: [
@@ -16,6 +17,7 @@ export default defineConfig({
         { dir: 'src/pages/blank', baseRoute: '' },
       ],
     }),
+    Layouts(),
     Unocss({
       presets: [presetUno()],
     }),

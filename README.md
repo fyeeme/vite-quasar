@@ -8,8 +8,9 @@ the default branch. then some of the third part will migrate to this branch late
 - [X] - [vite 2.x](https://github.com/vitejs/vite)
 
 This starter template also includes an plain :
-- [ ]  - [vite-quasar-api](https://github.com/fyeeme/vite-quasar-api)[**Coming soon**]
-- [x]  - [Vue Router 4.x](https://github.com/vuejs/vue-router-next)
+- [x]  - [vite-quasar-api](https://github.com/fyeeme/vite-quasar-api)[**Coming soon**]
+- [x]  - [File based routing](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
+- [x]  - [Layout system](https://github.com/JohnCampionJr/vite-plugin-vue-layouts) - layouts for pages
 - [x]  - [UnoCSS](https://github.com/antfu/unocss)[The instant on-demand Atomic CSS engine. and next architecture for windycss v4]
 - [x]  - [Pina](https://github.com/antfu/unocss)[Intuitive, type safe and flexible Store for Vue]
 - [x]  - [new `<script setup lang="ts">` syntax](https://github.com/vuejs/rfcs/pull/227)
@@ -21,7 +22,7 @@ This starter template also includes an plain :
 ## Out of box functions 
 - [x]  - api base axios
 - [x]  - pina as default state management
-- [ ]  - backend service write in sprint boot**Coming soon**]
+- [x]  - backend service write in sprint boot**Coming soon**]
 
 ## TODO 
 

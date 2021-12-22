@@ -16,12 +16,14 @@
     <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
       <!-- drawer content -->
       <q-list style="min-width: 100px">
-        <q-item v-for="(item, index) in generatedRoutes" :key="index">
-          <q-item-section class="cursor-pointer" @click="router.push({ path: item.path })">
-            {{ item.name }}
-          </q-item-section>
-          <q-separator class="bg-accent" />
-        </q-item>
+        <template v-for="(item, index) in generatedRoutes">
+          <q-item :key="index" v-if="item.name != 'index'">
+            <q-item-section class="cursor-pointer" @click="router.push({ path: item.path })">
+              {{ item.name }}
+            </q-item-section>
+            <q-separator class="bg-accent" />
+          </q-item>
+        </template>
       </q-list>
     </q-drawer>
 
@@ -36,11 +38,13 @@
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue'
+  import { onMounted, ref } from 'vue'
   import { useRouter } from 'vue-router'
 
   import generatedRoutes from 'virtual:generated-pages'
-
+  onMounted(() => {
+    console.log(43)
+  })
   const router = useRouter()
 
   const leftDrawerOpen = ref<boolean>(false)
