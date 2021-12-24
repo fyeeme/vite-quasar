@@ -10,7 +10,7 @@ function calculateGrade(course1: number, course2: number) : string {
 
 ## 接口定义
 
-```
+```ts
 interface User {
   name: string;
   id: number;
