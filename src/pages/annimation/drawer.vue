@@ -14,34 +14,28 @@
   </q-page>
 </template>
 
-<script>
+<script lang="ts" setup>
   import Velocity from 'velocity-animate'
-  export default {
-    data() {
-      return {
-        isOpen: false,
-      }
-    },
-    methods: {
-      beforeEnter(el) {
-        el.style.opacity = 0
-        el.style.width = '0em'
-      },
-      enter(el, done) {
-        Velocity(
-          el,
-          { opacity: 1, width: '12em' },
-          { duration: 1000, easing: '[100, 5]', complete: done }
-        )
-      },
-      leave(el, done) {
-        Velocity(
-          el,
-          { opacity: 0, width: '0em' },
-          { duration: 500, easing: 'easeInCubic', complete: done }
-        )
-      },
-    },
+  import { ref } from 'vue'
+
+  const isOpen = ref(false)
+  const beforeEnter = (el: any) => {
+    el.style.opacity = 0
+    el.style.width = '0em'
+  }
+  const enter = (el: any, done: any) => {
+    Velocity(
+      el,
+      { opacity: 1, width: '12em' },
+      { duration: 1000, easing: '[100, 5]', complete: done }
+    )
+  }
+  const leave = (el: any, done: any) => {
+    Velocity(
+      el,
+      { opacity: 0, width: '0em' },
+      { duration: 500, easing: 'easeInCubic', complete: done }
+    )
   }
 </script>
 

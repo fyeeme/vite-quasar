@@ -17,6 +17,7 @@ specifiers:
   vite-plugin-vue-layouts: ^0.5.0
   vue: ^3.2.26
   vue-router: ^4.0.12
+  vue-tsc: ^0.30.0
 
 dependencies:
   '@quasar/extras': 1.12.2
@@ -37,6 +38,7 @@ devDependencies:
   vite: 2.7.3_sass@1.32.0
   vite-plugin-pages: 0.19.6_vite@2.7.3
   vite-plugin-vue-layouts: 0.5.0_23eb389c859000c595bff8f15eeb256b
+  vue-tsc: 0.30.0_typescript@4.5.4
 
 packages:
 
@@ -46,10 +48,39 @@ packages:
       '@types/throttle-debounce': 2.1.0
     dev: true
 
+  /@babel/helper-validator-identifier/7.15.7:
+    resolution: {integrity: sha1-Ig35k7/pBKSmsCq08zhaXr9uI4k=, tarball: '@babel/helper-validator-identifier/download/@babel/helper-validator-identifier-7.15.7.tgz'}
+    engines: {node: '>=6.9.0'}
+    dev: true
+
   /@babel/parser/7.16.6:
     resolution: {integrity: sha512-Gr86ujcNuPDnNOY8mi383Hvi8IYrJVJYuf3XcuBM/Dgd+bINn/7tHqsj+tKkoreMbmGsFLsltI/JJd8fOFWGDQ==, tarball: '@babel/parser/download/@babel/parser-7.16.6.tgz'}
     engines: {node: '>=6.0.0'}
     hasBin: true
+
+  /@babel/types/7.16.0:
+    resolution: {integrity: sha1-2zsxOAT5aq3Qt3bEgj4SetZyibo=, tarball: '@babel/types/download/@babel/types-7.16.0.tgz'}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      '@babel/helper-validator-identifier': 7.15.7
+      to-fast-properties: 2.0.0
+    dev: true
+
+  /@emmetio/abbreviation/2.2.2:
+    resolution: {integrity: sha1-dGdi/Z56jC6mBPWAxi48/iUOaYk=, tarball: '@emmetio/abbreviation/download/@emmetio/abbreviation-2.2.2.tgz'}
+    dependencies:
+      '@emmetio/scanner': 1.0.0
+    dev: true
+
+  /@emmetio/css-abbreviation/2.1.4:
+    resolution: {integrity: sha1-kDYuihEizjt29sMVeQfTAYL1P1Q=, tarball: '@emmetio/css-abbreviation/download/@emmetio/css-abbreviation-2.1.4.tgz'}
+    dependencies:
+      '@emmetio/scanner': 1.0.0
+    dev: true
+
+  /@emmetio/scanner/1.0.0:
+    resolution: {integrity: sha1-Blsq9iM/50dNRII+PeuJckr0K18=, tarball: '@emmetio/scanner/download/@emmetio/scanner-1.0.0.tgz'}
+    dev: true
 
   /@iconify/types/1.0.12:
     resolution: {integrity: sha512-6er6wSGF3hgc1JEZqiGpg21CTCjHBYOUwqLmb2Idzkjiw6ogalGP0ZMLVutCzah+0WB4yP+Zd2oVPN8jvJ+Ftg==, tarball: '@iconify/types/download/@iconify/types-1.0.12.tgz'}
@@ -218,6 +249,66 @@ packages:
       vue: 3.2.26
     dev: true
 
+  /@volar/code-gen/0.30.0:
+    resolution: {integrity: sha512-5Wl32LebqeGe1a30TGX8DDB28lUyBJ/jX1GazInkj6O605FomWXu/ju/0WTJH2L+wjD09ZND79iuFmTna2UXMw==, tarball: '@volar/code-gen/download/@volar/code-gen-0.30.0.tgz'}
+    dependencies:
+      '@volar/shared': 0.30.0
+      '@volar/source-map': 0.30.0
+    dev: true
+
+  /@volar/html2pug/0.30.0:
+    resolution: {integrity: sha512-MchpYvwqv5V6P6l1c0fPIFhZ8ahLXCR6lWTb4ZRtvUdMFjJH0yXzkrb6U8UghzdV7Yok/nJuf2Unf4DmU+sTjw==, tarball: '@volar/html2pug/download/@volar/html2pug-0.30.0.tgz'}
+    dependencies:
+      domelementtype: 2.2.0
+      domhandler: 4.3.0
+      htmlparser2: 7.2.0
+      pug: 3.0.2
+    dev: true
+
+  /@volar/shared/0.30.0:
+    resolution: {integrity: sha512-zfQMIQWAbRd/u8iqKFUd/24EGEDKwr6QuKwEoXe1/UAhA8TIWBljnfm/pgMdyUzWPqnNFKeFLRHMlt8NUoDHJQ==, tarball: '@volar/shared/download/@volar/shared-0.30.0.tgz'}
+    dependencies:
+      upath: 2.0.1
+      vscode-jsonrpc: 8.0.0-next.4
+      vscode-uri: 3.0.3
+    dev: true
+
+  /@volar/source-map/0.30.0:
+    resolution: {integrity: sha512-uS/+4+pyGhcUPjKZLcUfccyqGD2iUoGRRljCW9qJKUJ+PGQh2HvjYzMzX2tBSqZ6LaRZZw8kIVidzSQdFfpK/g==, tarball: '@volar/source-map/download/@volar/source-map-0.30.0.tgz'}
+    dependencies:
+      '@volar/shared': 0.30.0
+    dev: true
+
+  /@volar/transforms/0.30.0:
+    resolution: {integrity: sha512-Jnbh/lYt91bzbq7pJMkApG8laWe4+gAqMhsgi+Ulitu98fvdZKlc+qseSa2kezfUN+565pQpuMk5FPT2c1tFCQ==, tarball: '@volar/transforms/download/@volar/transforms-0.30.0.tgz'}
+    dependencies:
+      '@volar/shared': 0.30.0
+      vscode-languageserver: 8.0.0-next.5
+    dev: true
+
+  /@volar/vue-code-gen/0.30.0:
+    resolution: {integrity: sha512-PK4wMPrxzJMVrkVUYoZQvGAVLaXrmRdaeFqa02nMeGrdjjrg6XX8vAmgQ34/ZNUMV/oMWm7soQ0n7BN0Vab/iA==, tarball: '@volar/vue-code-gen/download/@volar/vue-code-gen-0.30.0.tgz'}
+    dependencies:
+      '@volar/code-gen': 0.30.0
+      '@volar/shared': 0.30.0
+      '@volar/source-map': 0.30.0
+      '@vue/compiler-core': 3.2.26
+      '@vue/compiler-dom': 3.2.26
+      '@vue/shared': 3.2.26
+      upath: 2.0.1
+    dev: true
+
+  /@vscode/emmet-helper/2.8.3:
+    resolution: {integrity: sha512-dkTSL+BaBBS8gFgPm/GMOU+XfxaMyI+Fl1IUYxEi8Iv24RfHf9/q2eCpV2hs7sncLcoKWEbMYe5gv4Ppmp2Oxw==, tarball: '@vscode/emmet-helper/download/@vscode/emmet-helper-2.8.3.tgz'}
+    dependencies:
+      emmet: 2.3.5
+      jsonc-parser: 2.3.1
+      vscode-languageserver-textdocument: 1.0.3
+      vscode-languageserver-types: 3.16.0
+      vscode-nls: 5.0.0
+      vscode-uri: 2.1.2
+    dev: true
+
   /@vue/compiler-core/3.2.26:
     resolution: {integrity: sha512-N5XNBobZbaASdzY9Lga2D9Lul5vdCIOXvUMd6ThcN8zgqQhPKfCV+wfAJNNJKQkSHudnYRO2gEB+lp0iN3g2Tw==, tarball: '@vue/compiler-core/download/@vue/compiler-core-3.2.26.tgz'}
     dependencies:
@@ -269,7 +360,6 @@ packages:
     resolution: {integrity: sha512-h38bxCZLW6oFJVDlCcAiUKFnXI8xP8d+eO0pcDxx+7dQfSPje2AO6M9S9QO6MrxQB7fGP0DH0dYQ8ksf6hrXKQ==, tarball: '@vue/reactivity/download/@vue/reactivity-3.2.26.tgz'}
     dependencies:
       '@vue/shared': 3.2.26
-    dev: false
 
   /@vue/runtime-core/3.2.26:
     resolution: {integrity: sha512-BcYi7qZ9Nn+CJDJrHQ6Zsmxei2hDW0L6AB4vPvUQGBm2fZyC0GXd/4nVbyA2ubmuhctD5RbYY8L+5GUJszv9mQ==, tarball: '@vue/runtime-core/download/@vue/runtime-core-3.2.26.tgz'}
@@ -299,12 +389,26 @@ packages:
   /@vue/shared/3.2.26:
     resolution: {integrity: sha512-vPV6Cq+NIWbH5pZu+V+2QHE9y1qfuTq49uNWw4f7FDEeZaDU2H2cx5jcUZOAKW7qTrUS4k6qZPbMy1x4N96nbA==, tarball: '@vue/shared/download/@vue/shared-3.2.26.tgz'}
 
+  /acorn/7.4.1:
+    resolution: {integrity: sha1-/q7SVZc9LndVW4PbwIhRpsY1IPo=, tarball: acorn/download/acorn-7.4.1.tgz}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: true
+
   /anymatch/3.1.2:
     resolution: {integrity: sha1-wFV8CWrzLxBhmPT04qODU343hxY=, tarball: anymatch/download/anymatch-3.1.2.tgz}
     engines: {node: '>= 8'}
     dependencies:
       normalize-path: 3.0.0
       picomatch: 2.3.0
+    dev: true
+
+  /asap/2.0.6:
+    resolution: {integrity: sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY=, tarball: asap/download/asap-2.0.6.tgz}
+    dev: true
+
+  /assert-never/1.2.1:
+    resolution: {integrity: sha1-EfDjY78UYgX7CBk7XHuQ9NHPRP4=, tarball: assert-never/download/assert-never-1.2.1.tgz}
     dev: true
 
   /available-typed-arrays/1.0.5:
@@ -319,6 +423,13 @@ packages:
     transitivePeerDependencies:
       - debug
     dev: false
+
+  /babel-walk/3.0.0-canary-5:
+    resolution: {integrity: sha1-9m7Ncpg1eu5ElV8jWm71QhkQSxE=, tarball: babel-walk/download/babel-walk-3.0.0-canary-5.tgz}
+    engines: {node: '>= 10.0.0'}
+    dependencies:
+      '@babel/types': 7.16.0
+    dev: true
 
   /binary-extensions/2.2.0:
     resolution: {integrity: sha1-dfUC7q+f/eQvyYgpZFvk6na9ni0=, tarball: binary-extensions/download/binary-extensions-2.2.0.tgz}
@@ -350,6 +461,12 @@ packages:
       get-intrinsic: 1.1.1
     dev: true
 
+  /character-parser/2.2.0:
+    resolution: {integrity: sha1-x84o821LzZdE5f/CxfzeHHMmH8A=, tarball: character-parser/download/character-parser-2.2.0.tgz}
+    dependencies:
+      is-regex: 1.1.4
+    dev: true
+
   /chokidar/3.5.2:
     resolution: {integrity: sha512-ekGhOnNVPgT77r4K/U3GDhu+FQ2S8TnK/s2KbIGXi0SZWuwkZ2QNyfWdZW+TVfn84DpEP7rLeCt2UI6bJ8GwbQ==, tarball: chokidar/download/chokidar-3.5.2.tgz}
     engines: {node: '>= 8.10.0'}
@@ -371,6 +488,13 @@ packages:
 
   /consola/2.15.3:
     resolution: {integrity: sha1-LhH5jWpL5x/3LgvfB70j4Sy2FVA=, tarball: consola/download/consola-2.15.3.tgz}
+    dev: true
+
+  /constantinople/4.0.1:
+    resolution: {integrity: sha1-De8RP6Dk3I3oMzGlz3nIsyUhMVE=, tarball: constantinople/download/constantinople-4.0.1.tgz}
+    dependencies:
+      '@babel/parser': 7.16.6
+      '@babel/types': 7.16.0
     dev: true
 
   /csstype/2.6.19:
@@ -420,8 +544,55 @@ packages:
     resolution: {integrity: sha1-V2jw1AKlVb/EwmckayD4LOi1oQs=, tarball: defu/download/defu-5.0.0.tgz}
     dev: true
 
+  /doctypes/1.1.0:
+    resolution: {integrity: sha1-6oCxBqh1OHdOijpKWv4pPeSJ4Kk=, tarball: doctypes/download/doctypes-1.1.0.tgz}
+    dev: true
+
+  /dom-serializer/1.3.2:
+    resolution: {integrity: sha1-YgZDfTLO767HFhgDIwx6ILwbTZE=, tarball: dom-serializer/download/dom-serializer-1.3.2.tgz}
+    dependencies:
+      domelementtype: 2.2.0
+      domhandler: 4.3.0
+      entities: 2.2.0
+    dev: true
+
+  /domelementtype/2.2.0:
+    resolution: {integrity: sha1-mgtsJ4LtahxzI9QiZxg9+b2LHVc=, tarball: domelementtype/download/domelementtype-2.2.0.tgz}
+    dev: true
+
+  /domhandler/4.3.0:
+    resolution: {integrity: sha512-fC0aXNQXqKSFTr2wDNZDhsEYjCiYsDWl3D01kwt25hm1YIPyDGHvvi3rw+PLqHAl/m71MaiF7d5zvBr0p5UB2g==, tarball: domhandler/download/domhandler-4.3.0.tgz}
+    engines: {node: '>= 4'}
+    dependencies:
+      domelementtype: 2.2.0
+    dev: true
+
+  /domutils/2.8.0:
+    resolution: {integrity: sha1-RDfe9dtuLR9dbuhZvZXKfQIEgTU=, tarball: domutils/download/domutils-2.8.0.tgz}
+    dependencies:
+      dom-serializer: 1.3.2
+      domelementtype: 2.2.0
+      domhandler: 4.3.0
+    dev: true
+
   /duplexer/0.1.2:
     resolution: {integrity: sha1-Or5DrvODX4rgd9E23c4PJ2sEAOY=, tarball: duplexer/download/duplexer-0.1.2.tgz}
+    dev: true
+
+  /emmet/2.3.5:
+    resolution: {integrity: sha512-LcWfTamJnXIdMfLvJEC5Ld3hY5/KHXgv1L1bp6I7eEvB0ZhacHZ1kX0BYovJ8FroEsreLcq7n7kZhRMsf6jkXQ==, tarball: emmet/download/emmet-2.3.5.tgz}
+    dependencies:
+      '@emmetio/abbreviation': 2.2.2
+      '@emmetio/css-abbreviation': 2.1.4
+    dev: true
+
+  /entities/2.2.0:
+    resolution: {integrity: sha1-CY3JDruD2N/6CJ1VJWs1HTTE2lU=, tarball: entities/download/entities-2.2.0.tgz}
+    dev: true
+
+  /entities/3.0.1:
+    resolution: {integrity: sha1-K4h8piWF6W2zkDSC0zbBAGwwAdQ=, tarball: entities/download/entities-3.0.1.tgz}
+    engines: {node: '>=0.12'}
     dev: true
 
   /es-abstract/1.19.1:
@@ -738,6 +909,15 @@ packages:
       function-bind: 1.1.1
     dev: true
 
+  /htmlparser2/7.2.0:
+    resolution: {integrity: sha512-H7MImA4MS6cw7nbyURtLPO1Tms7C5H602LRETv95z1MxO/7CP7rDVROehUYeYBUYEON94NXXDEPmZuq+hX4sog==, tarball: htmlparser2/download/htmlparser2-7.2.0.tgz}
+    dependencies:
+      domelementtype: 2.2.0
+      domhandler: 4.3.0
+      domutils: 2.8.0
+      entities: 3.0.1
+    dev: true
+
   /import-meta-resolve/1.1.1:
     resolution: {integrity: sha1-JE/VQv0frnNVDU+LPN47uh17Kxg=, tarball: import-meta-resolve/download/import-meta-resolve-1.1.1.tgz}
     dependencies:
@@ -800,6 +980,13 @@ packages:
       has-tostringtag: 1.0.0
     dev: true
 
+  /is-expression/4.0.0:
+    resolution: {integrity: sha1-wzFVliq/IdCv0lUlFNZ9LsFv0qs=, tarball: is-expression/download/is-expression-4.0.0.tgz}
+    dependencies:
+      acorn: 7.4.1
+      object-assign: 4.1.1
+    dev: true
+
   /is-extglob/2.1.1:
     resolution: {integrity: sha1-qIwCU1eR8C7TfHahueqXc8gz+MI=, tarball: is-extglob/download/is-extglob-2.1.1.tgz}
     engines: {node: '>=0.10.0'}
@@ -831,6 +1018,10 @@ packages:
   /is-number/7.0.0:
     resolution: {integrity: sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=, tarball: is-number/download/is-number-7.0.0.tgz}
     engines: {node: '>=0.12.0'}
+    dev: true
+
+  /is-promise/2.2.2:
+    resolution: {integrity: sha1-OauVnMv5p3TPB597QMeib3YxNfE=, tarball: is-promise/download/is-promise-2.2.2.tgz}
     dev: true
 
   /is-regex/1.1.4:
@@ -900,12 +1091,31 @@ packages:
     hasBin: true
     dev: true
 
+  /js-stringify/1.0.2:
+    resolution: {integrity: sha1-Fzb939lyTyijaCrcYjCufk6Weds=, tarball: js-stringify/download/js-stringify-1.0.2.tgz}
+    dev: true
+
   /json5/2.2.0:
     resolution: {integrity: sha1-Lf7+cgxrpSXZ69kJlQ8FFTFsiaM=, tarball: json5/download/json5-2.2.0.tgz}
     engines: {node: '>=6'}
     hasBin: true
     dependencies:
       minimist: 1.2.5
+    dev: true
+
+  /jsonc-parser/2.3.1:
+    resolution: {integrity: sha1-WVSRULEz8u+sykj+nOHsBlmvI0I=, tarball: jsonc-parser/download/jsonc-parser-2.3.1.tgz}
+    dev: true
+
+  /jsonc-parser/3.0.0:
+    resolution: {integrity: sha1-q914VwHH5+rKip7IzwcMpRp0WiI=, tarball: jsonc-parser/download/jsonc-parser-3.0.0.tgz}
+    dev: true
+
+  /jstransformer/1.0.0:
+    resolution: {integrity: sha1-7Yvwkh4vPx7U1cGkT2hwntJHIsM=, tarball: jstransformer/download/jstransformer-1.0.0.tgz}
+    dependencies:
+      is-promise: 2.2.2
+      promise: 7.3.1
     dev: true
 
   /local-pkg/0.4.0:
@@ -966,6 +1176,11 @@ packages:
 
   /normalize-path/3.0.0:
     resolution: {integrity: sha1-Dc1p/yOhybEf0JeDFmRKA4ghamU=, tarball: normalize-path/download/normalize-path-3.0.0.tgz}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  /object-assign/4.1.1:
+    resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=, tarball: object-assign/download/object-assign-4.1.1.tgz?cache=0&sync_timestamp=1636644213234&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fobject-assign%2Fdownload%2Fobject-assign-4.1.1.tgz}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -1038,6 +1253,103 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.1
 
+  /promise/7.3.1:
+    resolution: {integrity: sha1-BktyYCsY+Q8pGSuLG8QY/9Hr078=, tarball: promise/download/promise-7.3.1.tgz}
+    dependencies:
+      asap: 2.0.6
+    dev: true
+
+  /pug-attrs/3.0.0:
+    resolution: {integrity: sha1-sQRR4DSBZeMfrRzCPr3dncc0fEE=, tarball: pug-attrs/download/pug-attrs-3.0.0.tgz}
+    dependencies:
+      constantinople: 4.0.1
+      js-stringify: 1.0.2
+      pug-runtime: 3.0.1
+    dev: true
+
+  /pug-code-gen/3.0.2:
+    resolution: {integrity: sha1-rRkPSUMTO/GGtguA3kgxAOEy4s4=, tarball: pug-code-gen/download/pug-code-gen-3.0.2.tgz}
+    dependencies:
+      constantinople: 4.0.1
+      doctypes: 1.1.0
+      js-stringify: 1.0.2
+      pug-attrs: 3.0.0
+      pug-error: 2.0.0
+      pug-runtime: 3.0.1
+      void-elements: 3.1.0
+      with: 7.0.2
+    dev: true
+
+  /pug-error/2.0.0:
+    resolution: {integrity: sha1-XGIXPLCcNN4qLOBPF7it/sdNjKU=, tarball: pug-error/download/pug-error-2.0.0.tgz}
+    dev: true
+
+  /pug-filters/4.0.0:
+    resolution: {integrity: sha1-0+Sa9bqEcum3pm2YDnB86dLMm14=, tarball: pug-filters/download/pug-filters-4.0.0.tgz}
+    dependencies:
+      constantinople: 4.0.1
+      jstransformer: 1.0.0
+      pug-error: 2.0.0
+      pug-walk: 2.0.0
+      resolve: 1.20.0
+    dev: true
+
+  /pug-lexer/5.0.1:
+    resolution: {integrity: sha1-rkRijFvvmxkLZlaDsojKkCS4sNU=, tarball: pug-lexer/download/pug-lexer-5.0.1.tgz}
+    dependencies:
+      character-parser: 2.2.0
+      is-expression: 4.0.0
+      pug-error: 2.0.0
+    dev: true
+
+  /pug-linker/4.0.0:
+    resolution: {integrity: sha1-EsvAWU/Fo+Brn8Web5PBRpYqdwg=, tarball: pug-linker/download/pug-linker-4.0.0.tgz}
+    dependencies:
+      pug-error: 2.0.0
+      pug-walk: 2.0.0
+    dev: true
+
+  /pug-load/3.0.0:
+    resolution: {integrity: sha1-n9nNpSICsIrbEdJWgfufNL1BtmI=, tarball: pug-load/download/pug-load-3.0.0.tgz}
+    dependencies:
+      object-assign: 4.1.1
+      pug-walk: 2.0.0
+    dev: true
+
+  /pug-parser/6.0.0:
+    resolution: {integrity: sha1-qP3ANYY6lbLB3F6/Ts+AtOdqEmA=, tarball: pug-parser/download/pug-parser-6.0.0.tgz}
+    dependencies:
+      pug-error: 2.0.0
+      token-stream: 1.0.0
+    dev: true
+
+  /pug-runtime/3.0.1:
+    resolution: {integrity: sha1-9jaXYgRyPzWoxfb61qzaKhkbg9c=, tarball: pug-runtime/download/pug-runtime-3.0.1.tgz}
+    dev: true
+
+  /pug-strip-comments/2.0.0:
+    resolution: {integrity: sha1-+UsH/WtJVSMzD0kKf1VLT/h2MD4=, tarball: pug-strip-comments/download/pug-strip-comments-2.0.0.tgz}
+    dependencies:
+      pug-error: 2.0.0
+    dev: true
+
+  /pug-walk/2.0.0:
+    resolution: {integrity: sha1-QXqrwpIyu0SZtbUGmistKiTV9f4=, tarball: pug-walk/download/pug-walk-2.0.0.tgz}
+    dev: true
+
+  /pug/3.0.2:
+    resolution: {integrity: sha1-81xxBzQ0VOQ7wnrg/3bHMbeOpTU=, tarball: pug/download/pug-3.0.2.tgz}
+    dependencies:
+      pug-code-gen: 3.0.2
+      pug-filters: 4.0.0
+      pug-lexer: 5.0.1
+      pug-linker: 4.0.0
+      pug-load: 3.0.0
+      pug-parser: 6.0.0
+      pug-runtime: 3.0.1
+      pug-strip-comments: 2.0.0
+    dev: true
+
   /quasar/2.3.4:
     resolution: {integrity: sha512-VgqjuzlRqZU2t4gKDHQHc/gt9nKXi9y1VRM7xYO6VOuJcm48wgOzyBdTwl1vVseghWeEIEHRM9M+R629WWF9MQ==, tarball: quasar/download/quasar-2.3.4.tgz}
     engines: {node: '>= 10.18.1', npm: '>= 6.13.4', yarn: '>= 1.21.1'}
@@ -1060,6 +1372,10 @@ packages:
     dependencies:
       call-bind: 1.0.2
       define-properties: 1.1.3
+    dev: true
+
+  /request-light/0.5.5:
+    resolution: {integrity: sha512-AvjfJuhyT6dYfhtIBF+IpTPQco+Td1QJ6PsIJ5xui110vQ5p9HxHk+m1XJqXazLQT6CxxSx9eNv6R/+fu4bZig==, tarball: request-light/download/request-light-0.5.5.tgz}
     dev: true
 
   /resolve/1.20.0:
@@ -1146,11 +1462,20 @@ packages:
       define-properties: 1.1.3
     dev: true
 
+  /to-fast-properties/2.0.0:
+    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=, tarball: to-fast-properties/download/to-fast-properties-2.0.0.tgz}
+    engines: {node: '>=4'}
+    dev: true
+
   /to-regex-range/5.0.1:
     resolution: {integrity: sha1-FkjESq58jZiKMmAY7XL1tN0DkuQ=, tarball: to-regex-range/download/to-regex-range-5.0.1.tgz}
     engines: {node: '>=8.0'}
     dependencies:
       is-number: 7.0.0
+    dev: true
+
+  /token-stream/1.0.0:
+    resolution: {integrity: sha1-zCAOqyYT9BZtJ/+a/HylbUnfbrQ=, tarball: token-stream/download/token-stream-1.0.0.tgz}
     dev: true
 
   /totalist/1.1.0:
@@ -1192,6 +1517,11 @@ packages:
       '@unocss/preset-uno': 0.17.2
       '@unocss/reset': 0.17.2
       '@unocss/vite': 0.17.2
+    dev: true
+
+  /upath/2.0.1:
+    resolution: {integrity: sha1-UMc96mjW9rmQ9R0nnOYIFmXWGos=, tarball: upath/download/upath-2.0.1.tgz}
+    engines: {node: '>=4'}
     dev: true
 
   /velocity-animate/1.5.2:
@@ -1260,6 +1590,127 @@ packages:
       fsevents: 2.3.2
     dev: true
 
+  /void-elements/3.1.0:
+    resolution: {integrity: sha1-YU9/v42AHwu18GYfWy9XhXUOTwk=, tarball: void-elements/download/void-elements-3.1.0.tgz}
+    engines: {node: '>=0.10.0'}
+    dev: true
+
+  /vscode-css-languageservice/5.1.9:
+    resolution: {integrity: sha512-/tFOWeZBL3Oc9Zc+2MAi3rEwiXJTSZsvjB+M7nSjWLbGPUIjukUA7YzLgsBoUfR35sPJYnXWUkL56PdfIYM8GA==, tarball: vscode-css-languageservice/download/vscode-css-languageservice-5.1.9.tgz}
+    dependencies:
+      vscode-languageserver-textdocument: 1.0.3
+      vscode-languageserver-types: 3.16.0
+      vscode-nls: 5.0.0
+      vscode-uri: 3.0.3
+    dev: true
+
+  /vscode-html-languageservice/4.2.1:
+    resolution: {integrity: sha512-PgaToZVXJ44nFWEBuSINdDgVV6EnpC3MnXBsysR3O5TKcAfywbYeRGRy+Y4dVR7YeUgDvtb+JkJoSkaYC0mxXQ==, tarball: vscode-html-languageservice/download/vscode-html-languageservice-4.2.1.tgz}
+    dependencies:
+      vscode-languageserver-textdocument: 1.0.3
+      vscode-languageserver-types: 3.16.0
+      vscode-nls: 5.0.0
+      vscode-uri: 3.0.3
+    dev: true
+
+  /vscode-json-languageservice/4.1.10:
+    resolution: {integrity: sha512-IHliMEEYSY0tJjJt0ECb8ESx/nRXpoy9kN42WVQXgaqGyizFAf3jibSiezDQTrrY7f3kywXggCU+kkJEM+OLZQ==, tarball: vscode-json-languageservice/download/vscode-json-languageservice-4.1.10.tgz}
+    dependencies:
+      jsonc-parser: 3.0.0
+      vscode-languageserver-textdocument: 1.0.3
+      vscode-languageserver-types: 3.16.0
+      vscode-nls: 5.0.0
+      vscode-uri: 3.0.3
+    dev: true
+
+  /vscode-jsonrpc/8.0.0-next.4:
+    resolution: {integrity: sha512-i+wvza5Wd0YV/t9qhnS8I+dJdhJ1fHIhRW4f262rXXM9Mgts5VZhYrRZufGcai4y99RlbZvwaZhplQ6diRXkaA==, tarball: vscode-jsonrpc/download/vscode-jsonrpc-8.0.0-next.4.tgz}
+    engines: {node: '>=8.0.0 || >=10.0.0'}
+    dev: true
+
+  /vscode-languageserver-protocol/3.17.0-next.11:
+    resolution: {integrity: sha512-9FqHT7XvM6tWFsnLvRfuQA7Zh7wZZYAwA9dK85lYthA8M1aXpXEP9drXVvO/Fe03MUeJpKVf2e4/NvDaFUnttg==, tarball: vscode-languageserver-protocol/download/vscode-languageserver-protocol-3.17.0-next.11.tgz}
+    dependencies:
+      vscode-jsonrpc: 8.0.0-next.4
+      vscode-languageserver-types: 3.17.0-next.5
+    dev: true
+
+  /vscode-languageserver-textdocument/1.0.3:
+    resolution: {integrity: sha512-ynEGytvgTb6HVSUwPJIAZgiHQmPCx8bZ8w5um5Lz+q5DjP0Zj8wTFhQpyg8xaMvefDytw2+HH5yzqS+FhsR28A==, tarball: vscode-languageserver-textdocument/download/vscode-languageserver-textdocument-1.0.3.tgz}
+    dev: true
+
+  /vscode-languageserver-types/3.16.0:
+    resolution: {integrity: sha1-7POT/BIexpdLLaPvsxVWRMUU4kc=, tarball: vscode-languageserver-types/download/vscode-languageserver-types-3.16.0.tgz}
+    dev: true
+
+  /vscode-languageserver-types/3.17.0-next.5:
+    resolution: {integrity: sha512-Zcfaw8BznhlJWB09LDR0dscXyxn9+liREqJnPF4pigeUCHwKxYapYqizwuCpMHQ/oLYiAvKwU+f28hPleYu7pA==, tarball: vscode-languageserver-types/download/vscode-languageserver-types-3.17.0-next.5.tgz}
+    dev: true
+
+  /vscode-languageserver/8.0.0-next.5:
+    resolution: {integrity: sha512-3E2W0eWtGKb6QAJqspOnD0thrBRRo8IGUMV5jpDNMcMKvmtkcxMwsBh0VxdvuWaZ51PiNyR4L+B+GUvkYsyFEg==, tarball: vscode-languageserver/download/vscode-languageserver-8.0.0-next.5.tgz}
+    hasBin: true
+    dependencies:
+      vscode-languageserver-protocol: 3.17.0-next.11
+    dev: true
+
+  /vscode-nls/5.0.0:
+    resolution: {integrity: sha1-mfDaC9nqfNpE5WWnTFSx8rwleEA=, tarball: vscode-nls/download/vscode-nls-5.0.0.tgz}
+    dev: true
+
+  /vscode-pug-languageservice/0.30.0:
+    resolution: {integrity: sha512-vSBf4ZXIUDK/COxAMkIe5wDKWNQUcdjndir/r3MoknEuC0LLE8GEH80x25yAGMXnMDhXUwL+ekCOzgb4RH6upA==, tarball: vscode-pug-languageservice/download/vscode-pug-languageservice-0.30.0.tgz}
+    dependencies:
+      '@volar/code-gen': 0.30.0
+      '@volar/shared': 0.30.0
+      '@volar/source-map': 0.30.0
+      '@volar/transforms': 0.30.0
+      pug-lexer: 5.0.1
+      pug-parser: 6.0.0
+      vscode-languageserver: 8.0.0-next.5
+    dev: true
+
+  /vscode-typescript-languageservice/0.30.0:
+    resolution: {integrity: sha512-Os+1yxz7+xZLeUNPS/cpiUsOxrSFIC6s79ir56W3QWd9jV/jcL1rt69Wsz8AilmQ7zSA9Cri5wqOb4VHj8IICQ==, tarball: vscode-typescript-languageservice/download/vscode-typescript-languageservice-0.30.0.tgz}
+    dependencies:
+      '@volar/shared': 0.30.0
+      semver: 7.3.5
+      upath: 2.0.1
+      vscode-languageserver: 8.0.0-next.5
+      vscode-languageserver-textdocument: 1.0.3
+    dev: true
+
+  /vscode-uri/2.1.2:
+    resolution: {integrity: sha1-yNQN6T61evMfPHFd1lDiyiwJbxw=, tarball: vscode-uri/download/vscode-uri-2.1.2.tgz}
+    dev: true
+
+  /vscode-uri/3.0.3:
+    resolution: {integrity: sha512-EcswR2S8bpR7fD0YPeS7r2xXExrScVMxg4MedACaWHEtx9ftCF/qHG1xGkolzTPcEmjTavCQgbVzHUIdTMzFGA==, tarball: vscode-uri/download/vscode-uri-3.0.3.tgz}
+    dev: true
+
+  /vscode-vue-languageservice/0.30.0:
+    resolution: {integrity: sha512-1O7wv3nrQxRwwuFXdWcBqj+szl3Hs/FrvoP3AkUNfMuY9ZPRNvqhObekcizzOCSe1vM1bZxXPai/5NeW/6AOkA==, tarball: vscode-vue-languageservice/download/vscode-vue-languageservice-0.30.0.tgz}
+    dependencies:
+      '@volar/code-gen': 0.30.0
+      '@volar/html2pug': 0.30.0
+      '@volar/shared': 0.30.0
+      '@volar/source-map': 0.30.0
+      '@volar/transforms': 0.30.0
+      '@volar/vue-code-gen': 0.30.0
+      '@vscode/emmet-helper': 2.8.3
+      '@vue/reactivity': 3.2.26
+      '@vue/shared': 3.2.26
+      request-light: 0.5.5
+      upath: 2.0.1
+      vscode-css-languageservice: 5.1.9
+      vscode-html-languageservice: 4.2.1
+      vscode-json-languageservice: 4.1.10
+      vscode-languageserver: 8.0.0-next.5
+      vscode-languageserver-textdocument: 1.0.3
+      vscode-pug-languageservice: 0.30.0
+      vscode-typescript-languageservice: 0.30.0
+    dev: true
+
   /vue-demi/0.12.1_vue@3.2.26:
     resolution: {integrity: sha1-9+GO++z/0RqwadFHLXoG4xm0F0w=, tarball: vue-demi/download/vue-demi-0.12.1.tgz}
     engines: {node: '>=12'}
@@ -1283,6 +1734,17 @@ packages:
       '@vue/devtools-api': 6.0.0-beta.21.1
       vue: 3.2.26
     dev: false
+
+  /vue-tsc/0.30.0_typescript@4.5.4:
+    resolution: {integrity: sha512-gtak7jRYpoERneZIItE+UoLPjV2Ba73nTA/MUzR+Wg3JnINhP4xgke+VHesM2JVTkABmAwj3yyaiMjDP0pY9jA==, tarball: vue-tsc/download/vue-tsc-0.30.0.tgz}
+    hasBin: true
+    peerDependencies:
+      typescript: '*'
+    dependencies:
+      '@volar/shared': 0.30.0
+      typescript: 4.5.4
+      vscode-vue-languageservice: 0.30.0
+    dev: true
 
   /vue/3.2.26:
     resolution: {integrity: sha512-KD4lULmskL5cCsEkfhERVRIOEDrfEL9CwAsLYpzptOGjaGFNWo3BQ9g8MAb7RaIO71rmVOziZ/uEN/rHwcUIhg==, tarball: vue/download/vue-3.2.26.tgz}
@@ -1323,6 +1785,16 @@ packages:
       foreach: 2.0.5
       has-tostringtag: 1.0.0
       is-typed-array: 1.1.8
+    dev: true
+
+  /with/7.0.2:
+    resolution: {integrity: sha1-zO461ULSVTinp6gKrSErmChJW6w=, tarball: with/download/with-7.0.2.tgz}
+    engines: {node: '>= 10.0.0'}
+    dependencies:
+      '@babel/parser': 7.16.6
+      '@babel/types': 7.16.0
+      assert-never: 1.2.1
+      babel-walk: 3.0.0-canary-5
     dev: true
 
   /yallist/4.0.0:
