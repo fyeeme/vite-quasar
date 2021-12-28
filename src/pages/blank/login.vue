@@ -1,6 +1,12 @@
 <template>
   <q-page class="py-4 text-center bg-gray-100">
     <div>demonstration for login page</div>
+    <div class="text-gray-500">
+      as <a class="text-primary" href="https://netlify.app">netlify.app</a> does not support api
+      publish, you should down
+      <a class="text-primary" href="https://github.com/fyeeme/vite-quasar-api">vite-quasar-api</a>
+      to your local machine
+    </div>
     <div>
       <q-btn
         class="my-4 inline-block"
