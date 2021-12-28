@@ -8,7 +8,7 @@ the default branch. then some of the third part will migrate to this branch late
 - [X] - [vite 2.x](https://github.com/vitejs/vite)
 
 This starter template also includes an plain :
-- [x]  - [vite-quasar-api](https://github.com/fyeeme/vite-quasar-api)[**Coming soon**]
+- [x]  - [vite-quasar-api](https://github.com/fyeeme/vite-quasar-api)(more feat needed)
 - [x]  - [File based routing](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
 - [x]  - [Layout system](https://github.com/JohnCampionJr/vite-plugin-vue-layouts) - layouts for pages
 - [x]  - [UnoCSS](https://github.com/antfu/unocss)[The instant on-demand Atomic CSS engine. and next architecture for windycss v4]
