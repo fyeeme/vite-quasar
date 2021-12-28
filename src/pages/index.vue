@@ -2,7 +2,8 @@
   <div class="column flex-center pa-4">
     <div class="before:content-['hello'] before:block ..."></div>
     <img alt="Vue logo" src="src/assets/img/logo.png" @click="getUser" />
-    <HelloWorld msg="Hello Vue 3 + Vite" />
+    <HelloWorld
+      msg="left menus are auto generate by vite-plugin-pages and vite-plugin-vue-layouts" />
   </div>
 </template>
 
