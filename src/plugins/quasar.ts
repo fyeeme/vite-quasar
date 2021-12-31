@@ -3,10 +3,10 @@ import '@quasar/extras/material-icons/material-icons.css'
 // Import Quasar css
 import 'quasar/src/css/index.sass'
 
-import { Quasar } from 'quasar'
+import { Quasar, Notify, LocalStorage } from 'quasar'
 
 const config = {
-  plugins: {}, // import Quasar plugins and add here
+  plugins: { Notify, LocalStorage }, // import Quasar plugins and add here
   /*
   config: {
     brand: {

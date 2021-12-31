@@ -5,7 +5,6 @@ import { LocalStorage, Notify } from 'quasar'
 
 const parseError = (result: any) => {
   if (result.status === 401) {
-    //fixme router.currentRoute.fullPath
     LocalStorage.set('lastUrl', router.currentRoute.value.fullPath)
     setTimeout(() => {
       router.push({
@@ -17,7 +16,7 @@ const parseError = (result: any) => {
     Notify.create({
       type: 'warning',
       position: 'top',
-      message: lang[result.message] || lang[result.code] || lang['defaultErrorMessage'],
+      message: lang[result.data] || lang[result.code] || result.message,
     })
   }
 }
@@ -43,7 +42,7 @@ api.interceptors.response.use(
   async (err) => {
     //login info 401,can be processed here
     const response = err.response
-    parseError(response)
+    parseError(response.data)
     return Promise.reject(response)
   }
 )

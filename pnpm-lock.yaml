@@ -10,7 +10,7 @@ specifiers:
   quasar: ^2.4.2
   sass: 1.32.0
   typescript: ^4.5.4
-  unocss: ^0.20
+  unocss: ^0.20.0
   velocity-animate: ^1.5.2
   vite: ^2.7.10
   vite-plugin-pages: ^0.19.8
@@ -498,7 +498,7 @@ packages:
     dev: true
 
   /csstype/2.6.19:
-    resolution: {integrity: sha512-ZVxXaNy28/k3kJg0Fou5MiYpp88j7H9hLZp8PDC3jV0WFjfH5E9xHb56L0W59cPbKbcHXeP4qyT8PrHp8t6LcQ==, tarball: csstype/download/csstype-2.6.19.tgz?cache=0&sync_timestamp=1637224867418&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcsstype%2Fdownload%2Fcsstype-2.6.19.tgz}
+    resolution: {integrity: sha512-ZVxXaNy28/k3kJg0Fou5MiYpp88j7H9hLZp8PDC3jV0WFjfH5E9xHb56L0W59cPbKbcHXeP4qyT8PrHp8t6LcQ==, tarball: csstype/download/csstype-2.6.19.tgz?cache=0&sync_timestamp=1637224779290&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcsstype%2Fdownload%2Fcsstype-2.6.19.tgz}
     dev: false
 
   /debug/4.3.3:
@@ -1413,7 +1413,7 @@ packages:
     dev: true
 
   /semver/7.3.5:
-    resolution: {integrity: sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc=, tarball: semver/download/semver-7.3.5.tgz}
+    resolution: {integrity: sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc=, tarball: semver/download/semver-7.3.5.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fsemver%2Fdownload%2Fsemver-7.3.5.tgz}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
