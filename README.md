@@ -9,21 +9,23 @@ the default branch. then some of the third part will migrate to this branch late
 - [x] - [Searchable Quasar Framework SVG icons](https://github.com/hawkeye64/iconexplorer.app)[quasar author's product]
 
 This starter template also includes an plain :
-- [x]  - [vite-quasar-api](https://github.com/fyeeme/vite-quasar-api)(more feat needed)
+- [x]  - [Vite-quasar-api](https://github.com/fyeeme/vite-quasar-api)(more feat needed)
 - [x]  - [File based routing](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
 - [x]  - [Layout system](https://github.com/JohnCampionJr/vite-plugin-vue-layouts) - layouts for pages
-- [x]  - [UnoCSS](https://github.com/antfu/unocss)[The instant on-demand Atomic CSS engine. and next architecture for windycss v4]
+- [x]  - [Unocss](https://github.com/antfu/unocss)[The instant on-demand Atomic CSS engine. and next architecture for windi css v4]
 - [x]  - [Pina](https://github.com/antfu/unocss)[Intuitive, type safe and flexible Store for Vue]
-- [x]  - [new `<script setup lang="ts">` syntax](https://github.com/vuejs/rfcs/pull/227)
-- [x]  - [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
-- [ ]  - ~~[Windi CSS](https://github.com/windicss/windicss)~~[**droped** and replaced with **UnoCSS**]
-- [ ]  - ~~[APIs auto importing](https://github.com/antfu/unplugin-auto-import)~~ - use Composition API and others directly[**ts with volar provider best type support**]
-- [ ]  - ~~[`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components)~~ - components auto import[**ts with volar provider best type support**]
+- [x]  - [`Vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) - file system based routing
 
 ## Out of box functions 
 - [x]  - api base axios
 - [x]  - pina as default state management
 - [x]  - backend service write in sprint boot**Coming soon**]
+
+## FAQ 
+1. why not use [Windi CSS](https://github.com/windicss/windicss) or [Tailwind css](https://github.com/tailwindlabs/tailwindcss)? 
+   - because Unocss is much more powerful than windi css[windi css is master faster than **tailwind**] but provide consistent api.
+2. why not use [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) or [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import)
+   - because ts with volar provider best type support, and you don't need them anymore, but if you still want to use them ,just free to try.
 
 ## TODO 
 
