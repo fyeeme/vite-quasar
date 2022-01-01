@@ -6,6 +6,7 @@ the default branch. then some of the third part will migrate to this branch late
 - [X] - [@quasar/vite-plugin](https://quasar.dev/start/vite-plugin) [official released]
 - [X] - [quasar 2.x](https://github.com/quasarframework/quasar)
 - [X] - [vite 2.x](https://github.com/vitejs/vite)
+- [x] - [Searchable Quasar Framework SVG icons](https://github.com/hawkeye64/iconexplorer.app)
 
 This starter template also includes an plain :
 - [x]  - [vite-quasar-api](https://github.com/fyeeme/vite-quasar-api)(more feat needed)
