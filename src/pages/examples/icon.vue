@@ -7,9 +7,12 @@
     <q-icon name="print" class="text-teal" style="font-size: 4.4em" />
     <q-icon name="today" class="text-orange" style="font-size: 2em" />
     <q-icon name="style" style="font-size: 3em" />
+    <q-icon :name="matLockOpen" class="text-pink-400 text-2xl" />
   </q-page>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import { matLockOpen } from '@quasar/extras/material-icons'
+</script>
 
 <style lang="scss" scoped></style>

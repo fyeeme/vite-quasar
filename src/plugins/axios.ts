@@ -1,8 +1,9 @@
 import router from 'src/router'
 import axios from 'axios'
-import lang from 'src/lang/en_US'
 import { LocalStorage, Notify } from 'quasar'
 
+// replace this with i18n
+const lang: string[] = []
 const parseError = (result: any) => {
   if (result.status === 401) {
     LocalStorage.set('lastUrl', router.currentRoute.value.fullPath)
