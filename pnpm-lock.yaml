@@ -1,40 +1,46 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@intlify/vite-plugin-vue-i18n': ^3.2.1
   '@quasar/extras': ^1.12.2
   '@quasar/vite-plugin': ^1.0.4
-  '@types/node': ^17.0.5
+  '@types/node': ^17.0.6
+  '@unocss/reset': ^0.20.2
   '@vitejs/plugin-vue': ^2.0.1
   axios: ^0.24.0
   pinia: ^2.0.9
   quasar: ^2.4.2
   sass: 1.32.0
   typescript: ^4.5.4
-  unocss: ^0.20.0
+  unocss: ^0.20.2
   velocity-animate: ^1.5.2
   vite: ^2.7.10
   vite-plugin-pages: ^0.19.8
   vite-plugin-vue-layouts: ^0.5.0
   vue: ^3.2.26
+  vue-i18n: ^9.1.9
   vue-router: ^4.0.12
   vue-tsc: ^0.30.1
 
 dependencies:
   '@quasar/extras': 1.12.2
+  '@unocss/reset': 0.20.2
   axios: 0.24.0
   pinia: 2.0.9_typescript@4.5.4+vue@3.2.26
   quasar: 2.4.2
   velocity-animate: 1.5.2
   vue: 3.2.26
+  vue-i18n: 9.1.9_vue@3.2.26
   vue-router: 4.0.12_vue@3.2.26
 
 devDependencies:
+  '@intlify/vite-plugin-vue-i18n': 3.2.1_vite@2.7.10+vue-i18n@9.1.9
   '@quasar/vite-plugin': 1.0.4_6149c5c36b0ee3c4d9a953c47c6cd51f
-  '@types/node': 17.0.5
+  '@types/node': 17.0.6
   '@vitejs/plugin-vue': 2.0.1_vite@2.7.10+vue@3.2.26
   sass: 1.32.0
   typescript: 4.5.4
-  unocss: 0.20.1
+  unocss: 0.20.2
   vite: 2.7.10_sass@1.32.0
   vite-plugin-pages: 0.19.8_vite@2.7.10
   vite-plugin-vue-layouts: 0.5.0_356ec39c15e6be83b5da8ae2fd7c7b8a
@@ -92,6 +98,120 @@ packages:
       '@iconify/types': 1.0.12
     dev: true
 
+  /@intlify/bundle-utils/2.2.0_vue-i18n@9.1.9:
+    resolution: {integrity: sha512-qVuN7+c84UB6rlLHSued2J9R86LG1rHg6ZibCghGMyPXnW0nOuIfkUFf1F7tXIqfMXjIPeJzlbpmzjWTI2z9Kw==, tarball: '@intlify/bundle-utils/download/@intlify/bundle-utils-2.2.0.tgz'}
+    engines: {node: '>= 12'}
+    peerDependencies:
+      petite-vue-i18n: '*'
+      vue-i18n: '*'
+    peerDependenciesMeta:
+      petite-vue-i18n:
+        optional: true
+      vue-i18n:
+        optional: true
+    dependencies:
+      '@intlify/message-compiler': 9.2.0-beta.26
+      '@intlify/shared': 9.2.0-beta.26
+      jsonc-eslint-parser: 1.4.1
+      source-map: 0.6.1
+      vue-i18n: 9.1.9_vue@3.2.26
+      yaml-eslint-parser: 0.3.2
+    dev: true
+
+  /@intlify/core-base/9.1.9:
+    resolution: {integrity: sha1-5OjJUQEHKOSvOg0T10zz+eet1/Y=, tarball: '@intlify/core-base/download/@intlify/core-base-9.1.9.tgz'}
+    engines: {node: '>= 10'}
+    dependencies:
+      '@intlify/devtools-if': 9.1.9
+      '@intlify/message-compiler': 9.1.9
+      '@intlify/message-resolver': 9.1.9
+      '@intlify/runtime': 9.1.9
+      '@intlify/shared': 9.1.9
+      '@intlify/vue-devtools': 9.1.9
+    dev: false
+
+  /@intlify/devtools-if/9.1.9:
+    resolution: {integrity: sha1-ow4d0SVv8sXJjY110HU4T7qJjl0=, tarball: '@intlify/devtools-if/download/@intlify/devtools-if-9.1.9.tgz'}
+    engines: {node: '>= 10'}
+    dependencies:
+      '@intlify/shared': 9.1.9
+    dev: false
+
+  /@intlify/message-compiler/9.1.9:
+    resolution: {integrity: sha1-EZPL0iSnHC+5gUVbhTSjx2bSlI0=, tarball: '@intlify/message-compiler/download/@intlify/message-compiler-9.1.9.tgz'}
+    engines: {node: '>= 10'}
+    dependencies:
+      '@intlify/message-resolver': 9.1.9
+      '@intlify/shared': 9.1.9
+      source-map: 0.6.1
+    dev: false
+
+  /@intlify/message-compiler/9.2.0-beta.26:
+    resolution: {integrity: sha512-qtDgHCMqrXNTekKXGzm0Dm6r3+/X7/jFXP+E07hx+PJbPMv7DzK1iU8h5LlAMQ1/jr2UIRBgXvR5wh35OKoGrA==, tarball: '@intlify/message-compiler/download/@intlify/message-compiler-9.2.0-beta.26.tgz'}
+    engines: {node: '>= 12'}
+    dependencies:
+      '@intlify/shared': 9.2.0-beta.26
+      source-map: 0.6.1
+    dev: true
+
+  /@intlify/message-resolver/9.1.9:
+    resolution: {integrity: sha1-MVXM0vXm0NwWyti38djpf82gW/w=, tarball: '@intlify/message-resolver/download/@intlify/message-resolver-9.1.9.tgz'}
+    engines: {node: '>= 10'}
+    dev: false
+
+  /@intlify/runtime/9.1.9:
+    resolution: {integrity: sha1-LBLOKVGKB1Yp7+0KjtKT7nQMsoU=, tarball: '@intlify/runtime/download/@intlify/runtime-9.1.9.tgz'}
+    engines: {node: '>= 10'}
+    dependencies:
+      '@intlify/message-compiler': 9.1.9
+      '@intlify/message-resolver': 9.1.9
+      '@intlify/shared': 9.1.9
+    dev: false
+
+  /@intlify/shared/9.1.9:
+    resolution: {integrity: sha1-C6r5YSi4VWBma+x4T/sB9mI8wXo=, tarball: '@intlify/shared/download/@intlify/shared-9.1.9.tgz'}
+    engines: {node: '>= 10'}
+    dev: false
+
+  /@intlify/shared/9.2.0-beta.26:
+    resolution: {integrity: sha512-MjUlkjNThqkqy8yXUcFKBiW/hIfqAn5cP3Vd0b4wdOHS8rPCEbvSbAnF08uiZDkVv8gTcsLyymX21GaU6oYyyQ==, tarball: '@intlify/shared/download/@intlify/shared-9.2.0-beta.26.tgz'}
+    engines: {node: '>= 12'}
+    dev: true
+
+  /@intlify/vite-plugin-vue-i18n/3.2.1_vite@2.7.10+vue-i18n@9.1.9:
+    resolution: {integrity: sha512-h/nIShN/tljZZfTWAI2jyMwDI7UxSkOPMQbMAh2poC+wO1H9N/qaK6+GqyXG79g3PWtu6Igvfx/JH116cMD9fQ==, tarball: '@intlify/vite-plugin-vue-i18n/download/@intlify/vite-plugin-vue-i18n-3.2.1.tgz'}
+    engines: {node: '>= 12'}
+    peerDependencies:
+      petite-vue-i18n: ^9.0.0
+      vite: ^2.0.0
+      vue-i18n: ^9.0.0
+    peerDependenciesMeta:
+      petite-vue-i18n:
+        optional: true
+      vue-i18n:
+        optional: true
+    dependencies:
+      '@intlify/bundle-utils': 2.2.0_vue-i18n@9.1.9
+      '@intlify/shared': 9.2.0-beta.26
+      '@rollup/pluginutils': 4.1.2
+      debug: 4.3.3
+      fast-glob: 3.2.7
+      source-map: 0.6.1
+      vite: 2.7.10_sass@1.32.0
+      vue-i18n: 9.1.9_vue@3.2.26
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@intlify/vue-devtools/9.1.9:
+    resolution: {integrity: sha1-K+j02+f37UEVZ26zI0gUHUEeQms=, tarball: '@intlify/vue-devtools/download/@intlify/vue-devtools-9.1.9.tgz'}
+    engines: {node: '>= 10'}
+    dependencies:
+      '@intlify/message-resolver': 9.1.9
+      '@intlify/runtime': 9.1.9
+      '@intlify/shared': 9.1.9
+    dev: false
+
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha1-dhnC6yGyVIP20WdUi0z9WnSIw9U=, tarball: '@nodelib/fs.scandir/download/@nodelib/fs.scandir-2.1.5.tgz'}
     engines: {node: '>= 8'}
@@ -139,25 +259,25 @@ packages:
     engines: {node: '>= 8.0.0'}
     dependencies:
       estree-walker: 2.0.2
-      picomatch: 2.3.0
+      picomatch: 2.3.1
     dev: true
 
-  /@types/node/17.0.5:
-    resolution: {integrity: sha512-w3mrvNXLeDYV1GKTZorGJQivK6XLCoGwpnyJFbJVK/aTBQUxOCaa/GlFAAN3OTDFcb7h5tiFG+YXCO2By+riZw==, tarball: '@types/node/download/@types/node-17.0.5.tgz'}
+  /@types/node/17.0.6:
+    resolution: {integrity: sha512-+XBAjfZmmivILUzO0HwBJoYkAyyySSLg5KCGBDFLomJo0sV6szvVLAf4ANZZ0pfWzgEds5KmGLG9D5hfEqOhaA==, tarball: '@types/node/download/@types/node-17.0.6.tgz'}
     dev: true
 
   /@types/throttle-debounce/2.1.0:
     resolution: {integrity: sha1-HD32JL/Eti+ZLTASuExW1B6rN3Y=, tarball: '@types/throttle-debounce/download/@types/throttle-debounce-2.1.0.tgz'}
     dev: true
 
-  /@unocss/cli/0.20.1:
-    resolution: {integrity: sha512-BPGl1I3WqLktF60ChchjPVirBkiLRxbuh7yC3AKL3PMLEuSjvxQ552RupBpyw/EUDvrMH9sx+uM4WGyjJh3+Pg==, tarball: '@unocss/cli/download/@unocss/cli-0.20.1.tgz'}
+  /@unocss/cli/0.20.2:
+    resolution: {integrity: sha512-9EOV7U4suxqbhDOIEQflCfnQ6IHDXOAIHK2t2dl0gKKPv/pK3mU20fUt0ZWFfRXQ5KYIPau3GYhLbq5frfrWkQ==, tarball: '@unocss/cli/download/@unocss/cli-0.20.2.tgz'}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
-      '@unocss/config': 0.20.1
-      '@unocss/core': 0.20.1
-      '@unocss/preset-uno': 0.20.1
+      '@unocss/config': 0.20.2
+      '@unocss/core': 0.20.2
+      '@unocss/preset-uno': 0.20.2
       cac: 6.7.12
       chokidar: 3.5.2
       colorette: 2.0.16
@@ -166,76 +286,75 @@ packages:
       pathe: 0.2.0
     dev: true
 
-  /@unocss/config/0.20.1:
-    resolution: {integrity: sha512-2XUSAYEasn0fZjbFP3W0qOAsgGZ/F0l0IDVD6wO31rXl5nzYdiX+EKnTRMwuc+uTJhop9LU2QU1suHICjf/WYQ==, tarball: '@unocss/config/download/@unocss/config-0.20.1.tgz'}
+  /@unocss/config/0.20.2:
+    resolution: {integrity: sha512-bgeHjpQKpCvjECJzkG+wApiEbWE3Oi7mo01Oy63ck49BiRgs1kCbnnEkw9FdEL1TP6RNA09b2I4tBkzuPwnrEg==, tarball: '@unocss/config/download/@unocss/config-0.20.2.tgz'}
     engines: {node: '>=14'}
     dependencies:
-      '@unocss/core': 0.20.1
+      '@unocss/core': 0.20.2
       unconfig: 0.2.2
     dev: true
 
-  /@unocss/core/0.20.1:
-    resolution: {integrity: sha512-SVnW/RRDe7MZQgkG/iJZzYCiODTehOLMmg2qpmtUZ4Lg777k0LgOy3k/w5bXuCW1zJ2mDvj66P7A/Yc8PFuhDQ==, tarball: '@unocss/core/download/@unocss/core-0.20.1.tgz'}
+  /@unocss/core/0.20.2:
+    resolution: {integrity: sha512-75aFwJS2fPoAVLnUXYhj4Rug8MqPYSyKDTw8qWBUIiuMd2dSLOd/GuWVejiZyd/MwwZL71EeNQnF3Wu8nft0ZQ==, tarball: '@unocss/core/download/@unocss/core-0.20.2.tgz'}
     dev: true
 
-  /@unocss/inspector/0.20.1:
-    resolution: {integrity: sha512-gTaJYKU/rAXe1vGPSn4+Q9rpnOSaAv8w3ClcLpFl8hjN87TfjW+DUkbndBgF9/W69ejd9R+jfOsi66HLBdB0VA==, tarball: '@unocss/inspector/download/@unocss/inspector-0.20.1.tgz'}
+  /@unocss/inspector/0.20.2:
+    resolution: {integrity: sha512-b32OvxuR2AVCg6XbOQBXoxbr76v0kKhU7MYDuvU74TqM9b/mXZF3CgQ8k8S6JfnxVAgeuavoz/wFnAvgj1KEjQ==, tarball: '@unocss/inspector/download/@unocss/inspector-0.20.2.tgz'}
     dependencies:
       gzip-size: 6.0.0
       sirv: 1.0.19
     dev: true
 
-  /@unocss/preset-attributify/0.20.1:
-    resolution: {integrity: sha512-g/a1fFdUr5PeOVgTpkJdjoozW2p1hBK8gUSty9zP5S9sR0tCEasqAtgOf/vSMvMLe0U0Ngb3eTZoJoWGXc/aNA==, tarball: '@unocss/preset-attributify/download/@unocss/preset-attributify-0.20.1.tgz'}
+  /@unocss/preset-attributify/0.20.2:
+    resolution: {integrity: sha512-tCzPR37DvHFeQ3VwBEdsU4UcCA6ciWoIyckyJwMPmQhgLkrMm0UvJV6Kem8QCcR6zAj+PgsaaWZaKPa4LpKnoQ==, tarball: '@unocss/preset-attributify/download/@unocss/preset-attributify-0.20.2.tgz'}
     dependencies:
-      '@unocss/core': 0.20.1
+      '@unocss/core': 0.20.2
     dev: true
 
-  /@unocss/preset-icons/0.20.1:
-    resolution: {integrity: sha512-vNAzRf0QtVNC0SXT8MbQZtMU3z3Gtgn0l7F7J7ydZDDaOchtrEH/6ZBb0ntpcY39e112ygK8n8RBvbYDVHV2+g==, tarball: '@unocss/preset-icons/download/@unocss/preset-icons-0.20.1.tgz'}
+  /@unocss/preset-icons/0.20.2:
+    resolution: {integrity: sha512-fdpfWrcDHlHemF2wKNuyrKJNfb8hD2XlJ/bbTVmwehKvaRE8YZZ5HtdRjCVmhLGpQ8ad9gjM/26YJxNhMauz1Q==, tarball: '@unocss/preset-icons/download/@unocss/preset-icons-0.20.2.tgz'}
     dependencies:
       '@iconify/utils': 1.0.20
-      '@unocss/core': 0.20.1
+      '@unocss/core': 0.20.2
       local-pkg: 0.4.0
     dev: true
 
-  /@unocss/preset-mini/0.20.1:
-    resolution: {integrity: sha512-TWlbfyN5+Q6YqcLy1J/AMODoPyS56heiNnFwmbTAdNbUtv7zk2EPVS4JNmMyo3dhFqabxUqXEuDyJFNp6hkvEw==, tarball: '@unocss/preset-mini/download/@unocss/preset-mini-0.20.1.tgz'}
+  /@unocss/preset-mini/0.20.2:
+    resolution: {integrity: sha512-HebyJ/RmSoouDQ4u0w4Vm+QEmfHHaIFnZM/mye5c6RGzgzw7VdV6Kq3Fl0N1Xi/5PnHNRc04WaJt7KXPD5l35w==, tarball: '@unocss/preset-mini/download/@unocss/preset-mini-0.20.2.tgz'}
     dependencies:
-      '@unocss/core': 0.20.1
+      '@unocss/core': 0.20.2
     dev: true
 
-  /@unocss/preset-uno/0.20.1:
-    resolution: {integrity: sha512-qP5ehm64USsktGW7uBIuFDNld8LYC23MD6NcfAiJyNido048HQYa5x+/YiyCybqPXalGsk41a4KMLrFfcxo2vw==, tarball: '@unocss/preset-uno/download/@unocss/preset-uno-0.20.1.tgz'}
+  /@unocss/preset-uno/0.20.2:
+    resolution: {integrity: sha512-elIxP1LNg2i/OhBgXEWmTnMvjtK2x6cDfq9m7FW6CeBeVVnUqOt73CpMWyrUPuRRIpZiuYTYEL4w3oo/HBvRJw==, tarball: '@unocss/preset-uno/download/@unocss/preset-uno-0.20.2.tgz'}
     dependencies:
-      '@unocss/core': 0.20.1
-      '@unocss/preset-mini': 0.20.1
-      '@unocss/preset-wind': 0.20.1
+      '@unocss/core': 0.20.2
+      '@unocss/preset-mini': 0.20.2
+      '@unocss/preset-wind': 0.20.2
     dev: true
 
-  /@unocss/preset-wind/0.20.1:
-    resolution: {integrity: sha512-TPh57hmUj+v+cBRmX1IhknuWM2pSi/BxdsGWvh1lr0SbLvpauAcpNr1IB4Ka0BwSDeCzl5TThL0fsJgpU9Za7g==, tarball: '@unocss/preset-wind/download/@unocss/preset-wind-0.20.1.tgz'}
+  /@unocss/preset-wind/0.20.2:
+    resolution: {integrity: sha512-rh6RqyYs03wn33/2LrgUDQlUE6DtCQqJsiBUOs3HyU/FABVjD/gpD4tsQFbvrAIceMrlAuA6w05CQ0hZQ/6iNw==, tarball: '@unocss/preset-wind/download/@unocss/preset-wind-0.20.2.tgz'}
     dependencies:
-      '@unocss/core': 0.20.1
-      '@unocss/preset-mini': 0.20.1
+      '@unocss/core': 0.20.2
+      '@unocss/preset-mini': 0.20.2
     dev: true
 
-  /@unocss/reset/0.20.1:
-    resolution: {integrity: sha512-Kv1l++0Yq2uPcgmHDIMzKCxVL579xtNUkBdpUYIT86phthBUeQClLNGbc/nC/XU4ezYbgTAqdPiJmnZda3Yasw==, tarball: '@unocss/reset/download/@unocss/reset-0.20.1.tgz'}
+  /@unocss/reset/0.20.2:
+    resolution: {integrity: sha512-UIzdRZrEE3pRnbWjr9BdRRiznlRwwD5sqpUzUabYxM0rNUfMZeDQxLPufbdn4+ndn00DK4RTZWjKtEp7OwJ8pA==, tarball: '@unocss/reset/download/@unocss/reset-0.20.2.tgz'}
+
+  /@unocss/scope/0.20.2:
+    resolution: {integrity: sha512-OSZNqbBC+VnOAx745TImlojWlDi3PzfVT1cCrGuYgIwWuH5MoWrHwJiPaR7WoDfclInlhYcjneFXSB+rsDQ6wg==, tarball: '@unocss/scope/download/@unocss/scope-0.20.2.tgz'}
     dev: true
 
-  /@unocss/scope/0.20.1:
-    resolution: {integrity: sha512-h47D2dno6oaZ7MvyTAKEzc9tbKZkPV5mauyUVLsMw7U9FBuR6JRt4BU+4muTHQTyMzPqeingmiLdz06/qJ/waw==, tarball: '@unocss/scope/download/@unocss/scope-0.20.1.tgz'}
-    dev: true
-
-  /@unocss/vite/0.20.1:
-    resolution: {integrity: sha512-nv1md/6/INeH+k6nclv5YtnMDzxxb1ILAYJlrnwHU56uLTF48T9H+a7m2vE7cMTyDtseBPaJv+L6+LkLVhAQcQ==, tarball: '@unocss/vite/download/@unocss/vite-0.20.1.tgz'}
+  /@unocss/vite/0.20.2:
+    resolution: {integrity: sha512-aiQzrXJpHjdJ+OJtKNIu/MHxjVuU2LRS80TuVrByF19N5mG7zKeGP2bU+l9sdVRoc6pZNjSL3/2BnozfQrn9Nw==, tarball: '@unocss/vite/download/@unocss/vite-0.20.2.tgz'}
     dependencies:
       '@rollup/pluginutils': 4.1.2
-      '@unocss/config': 0.20.1
-      '@unocss/core': 0.20.1
-      '@unocss/inspector': 0.20.1
-      '@unocss/scope': 0.20.1
+      '@unocss/config': 0.20.2
+      '@unocss/core': 0.20.2
+      '@unocss/inspector': 0.20.2
+      '@unocss/scope': 0.20.2
     dev: true
 
   /@vitejs/plugin-vue/2.0.1_vite@2.7.10+vue@3.2.26:
@@ -389,6 +508,14 @@ packages:
   /@vue/shared/3.2.26:
     resolution: {integrity: sha512-vPV6Cq+NIWbH5pZu+V+2QHE9y1qfuTq49uNWw4f7FDEeZaDU2H2cx5jcUZOAKW7qTrUS4k6qZPbMy1x4N96nbA==, tarball: '@vue/shared/download/@vue/shared-3.2.26.tgz'}
 
+  /acorn-jsx/5.3.2_acorn@7.4.1:
+    resolution: {integrity: sha1-ftW7VZCLOy8bxVxq8WU7rafweTc=, tarball: acorn-jsx/download/acorn-jsx-5.3.2.tgz}
+    peerDependencies:
+      acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
+    dependencies:
+      acorn: 7.4.1
+    dev: true
+
   /acorn/7.4.1:
     resolution: {integrity: sha1-/q7SVZc9LndVW4PbwIhRpsY1IPo=, tarball: acorn/download/acorn-7.4.1.tgz}
     engines: {node: '>=0.4.0'}
@@ -400,7 +527,7 @@ packages:
     engines: {node: '>= 8'}
     dependencies:
       normalize-path: 3.0.0
-      picomatch: 2.3.0
+      picomatch: 2.3.1
     dev: true
 
   /asap/2.0.6:
@@ -498,7 +625,7 @@ packages:
     dev: true
 
   /csstype/2.6.19:
-    resolution: {integrity: sha512-ZVxXaNy28/k3kJg0Fou5MiYpp88j7H9hLZp8PDC3jV0WFjfH5E9xHb56L0W59cPbKbcHXeP4qyT8PrHp8t6LcQ==, tarball: csstype/download/csstype-2.6.19.tgz?cache=0&sync_timestamp=1637224779290&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcsstype%2Fdownload%2Fcsstype-2.6.19.tgz}
+    resolution: {integrity: sha512-ZVxXaNy28/k3kJg0Fou5MiYpp88j7H9hLZp8PDC3jV0WFjfH5E9xHb56L0W59cPbKbcHXeP4qyT8PrHp8t6LcQ==, tarball: csstype/download/csstype-2.6.19.tgz}
     dev: false
 
   /debug/4.3.3:
@@ -803,6 +930,27 @@ packages:
       esbuild-windows-arm64: 0.13.15
     dev: true
 
+  /eslint-utils/2.1.0:
+    resolution: {integrity: sha1-0t5eA0JOcH3BDHQGjd7a5wh0Gyc=, tarball: eslint-utils/download/eslint-utils-2.1.0.tgz}
+    engines: {node: '>=6'}
+    dependencies:
+      eslint-visitor-keys: 1.3.0
+    dev: true
+
+  /eslint-visitor-keys/1.3.0:
+    resolution: {integrity: sha1-MOvR73wv3/AcOk8VEESvJfqwUj4=, tarball: eslint-visitor-keys/download/eslint-visitor-keys-1.3.0.tgz}
+    engines: {node: '>=4'}
+    dev: true
+
+  /espree/6.2.1:
+    resolution: {integrity: sha1-d/xy4f10SiBSwg84pbV1gy6Cc0o=, tarball: espree/download/espree-6.2.1.tgz}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      acorn: 7.4.1
+      acorn-jsx: 5.3.2_acorn@7.4.1
+      eslint-visitor-keys: 1.3.0
+    dev: true
+
   /estree-walker/2.0.2:
     resolution: {integrity: sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=, tarball: estree-walker/download/estree-walker-2.0.2.tgz}
 
@@ -1103,6 +1251,17 @@ packages:
       minimist: 1.2.5
     dev: true
 
+  /jsonc-eslint-parser/1.4.1:
+    resolution: {integrity: sha1-jL6Z9vUZmsvFqCPEwLYTVBECf6Y=, tarball: jsonc-eslint-parser/download/jsonc-eslint-parser-1.4.1.tgz}
+    engines: {node: '>=8.10.0'}
+    dependencies:
+      acorn: 7.4.1
+      eslint-utils: 2.1.0
+      eslint-visitor-keys: 1.3.0
+      espree: 6.2.1
+      semver: 6.3.0
+    dev: true
+
   /jsonc-parser/2.3.1:
     resolution: {integrity: sha1-WVSRULEz8u+sykj+nOHsBlmvI0I=, tarball: jsonc-parser/download/jsonc-parser-2.3.1.tgz}
     dev: true
@@ -1123,6 +1282,10 @@ packages:
     engines: {node: '>=14'}
     dependencies:
       mlly: 0.2.10
+    dev: true
+
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==, tarball: lodash/download/lodash-4.17.21.tgz}
     dev: true
 
   /lru-cache/6.0.0:
@@ -1147,7 +1310,7 @@ packages:
     engines: {node: '>=8.6'}
     dependencies:
       braces: 3.0.2
-      picomatch: 2.3.0
+      picomatch: 2.3.1
     dev: true
 
   /minimist/1.2.5:
@@ -1180,7 +1343,7 @@ packages:
     dev: true
 
   /object-assign/4.1.1:
-    resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=, tarball: object-assign/download/object-assign-4.1.1.tgz}
+    resolution: {integrity: sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=, tarball: object-assign/download/object-assign-4.1.1.tgz?cache=0&sync_timestamp=1636644213234&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fobject-assign%2Fdownload%2Fobject-assign-4.1.1.tgz}
     engines: {node: '>=0.10.0'}
     dev: true
 
@@ -1222,8 +1385,8 @@ packages:
   /picocolors/1.0.0:
     resolution: {integrity: sha1-y1vcdP8/UYkiNur3nWi8RFZKuBw=, tarball: picocolors/download/picocolors-1.0.0.tgz}
 
-  /picomatch/2.3.0:
-    resolution: {integrity: sha1-8fBh3o9qS/AiiS4tEoI0+5gwKXI=, tarball: picomatch/download/picomatch-2.3.0.tgz}
+  /picomatch/2.3.1:
+    resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==, tarball: picomatch/download/picomatch-2.3.1.tgz}
     engines: {node: '>=8.6'}
     dev: true
 
@@ -1363,7 +1526,7 @@ packages:
     resolution: {integrity: sha1-dKNwvYVxFuJFspzJc0DNQxoCpsc=, tarball: readdirp/download/readdirp-3.6.0.tgz}
     engines: {node: '>=8.10.0'}
     dependencies:
-      picomatch: 2.3.0
+      picomatch: 2.3.1
     dev: true
 
   /regexp.prototype.flags/1.3.1:
@@ -1412,8 +1575,13 @@ packages:
       chokidar: 3.5.2
     dev: true
 
+  /semver/6.3.0:
+    resolution: {integrity: sha1-7gpkyK9ejO6mdoexM3YeG+y9HT0=, tarball: semver/download/semver-6.3.0.tgz}
+    hasBin: true
+    dev: true
+
   /semver/7.3.5:
-    resolution: {integrity: sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc=, tarball: semver/download/semver-7.3.5.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fsemver%2Fdownload%2Fsemver-7.3.5.tgz}
+    resolution: {integrity: sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc=, tarball: semver/download/semver-7.3.5.tgz}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -1506,17 +1674,17 @@ packages:
       jiti: 1.12.9
     dev: true
 
-  /unocss/0.20.1:
-    resolution: {integrity: sha512-4N1uGy7mw/CBBYUlP844XOMp7DI9K1/adqT1V6tUAb2oGIgelyDaq3C5+LbVv9etVmKkMjcT9xrE0B0wPGak5Q==, tarball: unocss/download/unocss-0.20.1.tgz}
+  /unocss/0.20.2:
+    resolution: {integrity: sha512-R5vp7+oZnjWvreiRk+3WJjs3Aebl3SIdknbchPT9fjlNxBKrsPvaEmMxa7bY0GndTfjaktE2e5nb1/7BF11s4A==, tarball: unocss/download/unocss-0.20.2.tgz}
     engines: {node: '>=14'}
     dependencies:
-      '@unocss/cli': 0.20.1
-      '@unocss/core': 0.20.1
-      '@unocss/preset-attributify': 0.20.1
-      '@unocss/preset-icons': 0.20.1
-      '@unocss/preset-uno': 0.20.1
-      '@unocss/reset': 0.20.1
-      '@unocss/vite': 0.20.1
+      '@unocss/cli': 0.20.2
+      '@unocss/core': 0.20.2
+      '@unocss/preset-attributify': 0.20.2
+      '@unocss/preset-icons': 0.20.2
+      '@unocss/preset-uno': 0.20.2
+      '@unocss/reset': 0.20.2
+      '@unocss/vite': 0.20.2
     dev: true
 
   /upath/2.0.1:
@@ -1543,7 +1711,7 @@ packages:
       json5: 2.2.0
       local-pkg: 0.4.0
       vite: 2.7.10_sass@1.32.0
-      yaml: 2.0.0-9
+      yaml: 2.0.0-10
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1726,6 +1894,19 @@ packages:
       vue: 3.2.26
     dev: false
 
+  /vue-i18n/9.1.9_vue@3.2.26:
+    resolution: {integrity: sha512-JeRdNVxS2OGp1E+pye5XB6+M6BBkHwAv9C80Q7+kzoMdUDGRna06tjC0vCB/jDX9aWrl5swxOMFcyAr7or8XTA==, tarball: vue-i18n/download/vue-i18n-9.1.9.tgz}
+    engines: {node: '>= 10'}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@intlify/core-base': 9.1.9
+      '@intlify/shared': 9.1.9
+      '@intlify/vue-devtools': 9.1.9
+      '@vue/devtools-api': 6.0.0-beta.21.1
+      vue: 3.2.26
+    dev: false
+
   /vue-router/4.0.12_vue@3.2.26:
     resolution: {integrity: sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==, tarball: vue-router/download/vue-router-4.0.12.tgz}
     peerDependencies:
@@ -1801,7 +1982,20 @@ packages:
     resolution: {integrity: sha1-m7knkNnA7/7GO+c1GeEaNQGaOnI=, tarball: yallist/download/yallist-4.0.0.tgz}
     dev: true
 
-  /yaml/2.0.0-9:
-    resolution: {integrity: sha512-Bf2KowHjyVkIIiGMt7+fbhmlvKOaE8DWuD07bnL4+FQ9sPmEl/5IzGpBpoxPqOaHuyasBjJhyXDcISpJWfhCGw==, tarball: yaml/download/yaml-2.0.0-9.tgz}
+  /yaml-eslint-parser/0.3.2:
+    resolution: {integrity: sha1-x/XzkE8cBq1V3HExpzGwGEJrSJg=, tarball: yaml-eslint-parser/download/yaml-eslint-parser-0.3.2.tgz}
+    dependencies:
+      eslint-visitor-keys: 1.3.0
+      lodash: 4.17.21
+      yaml: 1.10.2
+    dev: true
+
+  /yaml/1.10.2:
+    resolution: {integrity: sha1-IwHF/78StGfejaIzOkWeKeeSDks=, tarball: yaml/download/yaml-1.10.2.tgz}
+    engines: {node: '>= 6'}
+    dev: true
+
+  /yaml/2.0.0-10:
+    resolution: {integrity: sha512-FHV8s5ODFFQXX/enJEU2EkanNl1UDBUz8oa4k5Qo/sR+Iq7VmhCDkRMb0/mjJCNeAWQ31W8WV6PYStDE4d9EIw==, tarball: yaml/download/yaml-2.0.0-10.tgz}
     engines: {node: '>= 12'}
     dev: true

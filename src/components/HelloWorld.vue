@@ -10,7 +10,9 @@
 </script>
 
 <template>
-  <div class="text-2xl text-true-gray-600 py-20px">{{ msg }}</div>
+  <div class="text-2xl text-true-gray-600 py-20px">
+    {{ msg }}
+  </div>
   <div class="flex items-center">
     <q-btn
       rounded

@@ -6,6 +6,8 @@ import Unocss from 'unocss/vite'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import { presetUno } from 'unocss'
+import VueI18n from '@intlify/vite-plugin-vue-i18n'
+
 export default defineConfig({
   plugins: [
     vue({ template: { transformAssetUrls } }),
@@ -21,11 +23,14 @@ export default defineConfig({
     Unocss({
       presets: [presetUno()],
     }),
+    VueI18n({
+      include: resolve(__dirname, './src/locales/**'),
+    }),
   ],
   resolve: {
     alias: {
-      src: resolve(__dirname, './src'),
-      '/@': resolve(__dirname, './src'),
+      src: resolve(__dirname, 'src'),
+      '~': resolve(__dirname, 'src'),
     },
   },
   server: {
