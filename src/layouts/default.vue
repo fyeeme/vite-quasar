@@ -38,13 +38,11 @@
 </template>
 
 <script setup lang="ts">
-  import { onMounted, ref } from 'vue'
+  import { ref } from 'vue'
   import { useRouter } from 'vue-router'
 
   import generatedRoutes from 'virtual:generated-pages'
-  onMounted(() => {
-    console.log(43)
-  })
+
   const router = useRouter()
 
   const leftDrawerOpen = ref<boolean>(false)

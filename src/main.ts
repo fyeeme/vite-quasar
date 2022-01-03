@@ -7,6 +7,6 @@ import '@unocss/reset/tailwind.css'
 const app = createApp(App)
 
 // install all modules under `modules/`
-Object.values(import.meta.globEager('./plugins/*.ts')).forEach((plugin) => plugin.install?.(app))
+Object.values(import.meta.globEager('/src/modules/*.ts')).forEach((module) => module.install?.(app))
 
 app.mount('#app')
