@@ -4,7 +4,7 @@
 
     <transition @before-enter="beforeEnter" @enter="enter" @leave="leave" :css="false">
       <div v-if="isOpen" class="drawer mt-8">
-        <img src="/@/assets/img/logo.png" alt="avatar" />
+        <img src="/src/assets/img/logo.png" alt="avatar" />
         <div></div>
         <div></div>
         <div></div>
