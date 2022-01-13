@@ -8,7 +8,7 @@ the default branch. then some of the third part will migrate to this branch late
 - [X] - [vite 2.x](https://github.com/vitejs/vite)
 
 This starter template also includes an plain :
-- [x] - [Pina](https://github.com/antfu/unocss)[Intuitive, type safe and flexible Store for Vue]
+- [x] - [pinia](https://github.com/vuejs/pinia)[Intuitive, type safe and flexible Store for Vue]
 - [x] - [UnoCss](https://github.com/antfu/unocss)[The instant on-demand Atomic CSS engine. and next architecture for windi css v4]
 - [x] - [vite-plugin-vue-i18n](https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n)[vue-i18n-next plugin for vite]
 - [x] - [Vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) - file system based routing

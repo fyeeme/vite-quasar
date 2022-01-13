@@ -9,7 +9,7 @@ specifiers:
   '@vitejs/plugin-vue': ^2.0.1
   axios: ^0.24.0
   pinia: ^2.0.9
-  quasar: ^2.4.7
+  quasar: ^2.4.8
   sass: 1.32.0
   typescript: ^4.5.4
   unocss: ^0.22.0
@@ -27,7 +27,7 @@ dependencies:
   '@unocss/reset': 0.20.4
   axios: 0.24.0
   pinia: 2.0.9_typescript@4.5.4+vue@3.2.26
-  quasar: 2.4.7
+  quasar: 2.4.8
   velocity-animate: 1.5.2
   vue: 3.2.26
   vue-i18n: 9.1.9_vue@3.2.26
@@ -35,7 +35,7 @@ dependencies:
 
 devDependencies:
   '@intlify/vite-plugin-vue-i18n': 3.2.1_vite@2.7.10+vue-i18n@9.1.9
-  '@quasar/vite-plugin': 1.0.4_b618e4238b64adb6035b7c567cb39da0
+  '@quasar/vite-plugin': 1.0.4_ff023bbd7d25ad104681c760c74c5955
   '@types/node': 17.0.8
   '@vitejs/plugin-vue': 2.0.1_vite@2.7.10+vue@3.2.26
   sass: 1.32.0
@@ -255,7 +255,7 @@ packages:
     resolution: {integrity: sha512-BIWpysRnHqbroPnCtWQPNUdhLo97p45RC7J+SVgJH3hdsCHkwJTBMAwaw1522SJn+nEkrPKq1YLm0MgAYmPvvw==, tarball: '@quasar/extras/download/@quasar/extras-1.12.3.tgz'}
     dev: false
 
-  /@quasar/vite-plugin/1.0.4_b618e4238b64adb6035b7c567cb39da0:
+  /@quasar/vite-plugin/1.0.4_ff023bbd7d25ad104681c760c74c5955:
     resolution: {integrity: sha512-rH3QKL1p1bvAki62m2Jovh4I84iQifcPSMverzvMxjzKAqRhaxcDqBwJLC5WxnzJ8DWy/rAPI7pQAWlImG7Q7Q==, tarball: '@quasar/vite-plugin/download/@quasar/vite-plugin-1.0.4.tgz'}
     engines: {node: '>=12'}
     peerDependencies:
@@ -263,7 +263,7 @@ packages:
       vite: ^2.0.0
       vue: ^3.0.0
     dependencies:
-      quasar: 2.4.7
+      quasar: 2.4.8
       vite: 2.7.10_sass@1.32.0
       vue: 3.2.26
     dev: true
@@ -649,7 +649,7 @@ packages:
     dev: true
 
   /cross-spawn/7.0.3:
-    resolution: {integrity: sha1-9zqFudXUHQRVUcF34ogtSshXKKY=, tarball: cross-spawn/download/cross-spawn-7.0.3.tgz?cache=0&sync_timestamp=1632883303690&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcross-spawn%2Fdownload%2Fcross-spawn-7.0.3.tgz}
+    resolution: {integrity: sha1-9zqFudXUHQRVUcF34ogtSshXKKY=, tarball: cross-spawn/download/cross-spawn-7.0.3.tgz}
     engines: {node: '>= 8'}
     dependencies:
       path-key: 3.1.1
@@ -1312,7 +1312,7 @@ packages:
     dev: true
 
   /json5/2.2.0:
-    resolution: {integrity: sha1-Lf7+cgxrpSXZ69kJlQ8FFTFsiaM=, tarball: json5/download/json5-2.2.0.tgz}
+    resolution: {integrity: sha512-f+8cldu7X/y7RAJurMEJmdoKXGB/X550w2Nr3tTbezL6RwEE/iMcm+tZnXeoZtKuOq6ft8+CqzEkrIgx1fPoQA==, tarball: json5/download/json5-2.2.0.tgz}
     engines: {node: '>=6'}
     hasBin: true
     dependencies:
@@ -1412,8 +1412,8 @@ packages:
     resolution: {integrity: sha1-0J0fNXtEP0kzgqjrPM0YOHKuYAk=, tarball: ms/download/ms-2.1.2.tgz?cache=0&sync_timestamp=1632883299868&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fms%2Fdownload%2Fms-2.1.2.tgz}
     dev: true
 
-  /nanoid/3.1.31:
-    resolution: {integrity: sha512-ZivnJm0o9bb13p2Ot5CpgC2rQdzB9Uxm/mFZweqm5eMViqOJe3PV6LU2E30SiLgheesmcPrjquqraoolONSA0A==, tarball: nanoid/download/nanoid-3.1.31.tgz}
+  /nanoid/3.1.32:
+    resolution: {integrity: sha512-F8mf7R3iT9bvThBoW4tGXhXFHCctyCiUUPrWF8WaTqa3h96d9QybkSeba43XVOOE3oiLfkVDe4bT8MeGmkrTxw==, tarball: nanoid/download/nanoid-3.1.32.tgz}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
@@ -1530,7 +1530,7 @@ packages:
     resolution: {integrity: sha512-jBDboWM8qpaqwkMwItqTQTiFikhs/67OYVvblFFTM7MrZjt6yMKd6r2kgXizEbTTljacm4NldIlZnhbjr84QYg==, tarball: postcss/download/postcss-8.4.5.tgz}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
-      nanoid: 3.1.31
+      nanoid: 3.1.32
       picocolors: 1.0.0
       source-map-js: 1.0.1
 
@@ -1631,8 +1631,8 @@ packages:
       pug-strip-comments: 2.0.0
     dev: true
 
-  /quasar/2.4.7:
-    resolution: {integrity: sha512-IeiTp/ya9UW3DLNArwSEUHN0U0ddEfw4o3oxwHL/iQhnJonu2zJF/wZicTh1iMEBqmnBQS7hub++8OZ/EGHZZQ==, tarball: quasar/download/quasar-2.4.7.tgz}
+  /quasar/2.4.8:
+    resolution: {integrity: sha512-QgqdMYsPaO4/TYu/IHcT4wGms4vhJEIv83O2sMjP//I/B8QSq2D2YYH6q4mJqkhiIakf3RDxWMLZgsyxyPeoqA==, tarball: quasar/download/quasar-2.4.8.tgz}
     engines: {node: '>= 10.18.1', npm: '>= 6.13.4', yarn: '>= 1.21.1'}
     dev: false
 
@@ -1696,12 +1696,12 @@ packages:
     dev: true
 
   /semver/6.3.0:
-    resolution: {integrity: sha1-7gpkyK9ejO6mdoexM3YeG+y9HT0=, tarball: semver/download/semver-6.3.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fsemver%2Fdownload%2Fsemver-6.3.0.tgz}
+    resolution: {integrity: sha1-7gpkyK9ejO6mdoexM3YeG+y9HT0=, tarball: semver/download/semver-6.3.0.tgz}
     hasBin: true
     dev: true
 
   /semver/7.3.5:
-    resolution: {integrity: sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc=, tarball: semver/download/semver-7.3.5.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fsemver%2Fdownload%2Fsemver-7.3.5.tgz}
+    resolution: {integrity: sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc=, tarball: semver/download/semver-7.3.5.tgz}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
