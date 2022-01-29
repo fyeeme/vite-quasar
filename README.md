@@ -30,3 +30,20 @@ This starter template also includes an plain :
 ## TODO 
 
 some of the other are existed to use for improving your efficiency when use vue. they are waiting for discovered.
+
+
+## HOW TO USE 
+
+pnpm is recommended to use. also you use npm two.
+
+```shell
+npm i -g pnpm
+pnpm install 
+pnpm run dev
+```
+or 
+
+```shell
+npm install 
+npm run dev
+```
