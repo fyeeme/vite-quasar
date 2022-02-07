@@ -42,7 +42,6 @@
   import { useRouter } from 'vue-router'
 
   import generatedRoutes from 'virtual:generated-pages'
-
   const router = useRouter()
 
   const leftDrawerOpen = ref<boolean>(false)

@@ -10,7 +10,6 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  console.log('router beforeEach', router.currentRoute.value.fullPath)
   next()
 })
 export default router
