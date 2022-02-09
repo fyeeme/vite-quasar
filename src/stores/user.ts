@@ -15,10 +15,9 @@ export const useUserStore = defineStore('user', () => {
    * Changes the current name of the user and saves the one that was used
    * before.
    *
-   * @param name - new name to set
+   * @param id - new name to set
    */
   function setNewId(id: string) {
-    console.log(21, savedId, previousIds)
     if (savedId.value) previousIds.value.add(savedId.value)
 
     savedId.value = id
