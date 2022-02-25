@@ -16,13 +16,14 @@
 <script setup="props, { emit }" lang="ts">
   import { useI18n } from 'vue-i18n'
 
+  import { matLanguage } from '@quasar/extras/material-icons'
+  import { userApi } from 'src/api/user'
+  import HelloWorld from 'src/components/HelloWorld.vue'
+
   interface User {
     name: string
     age: number
   }
-  import { matLanguage } from '@quasar/extras/material-icons'
-  import { userApi } from 'src/api/user'
-  import HelloWorld from 'src/components/HelloWorld.vue'
 
   const { t, locale, availableLocales } = useI18n()
   const emit = defineEmits(['update'])
