@@ -39,7 +39,7 @@
     })
   }
 
-  const count = ref<number | null>(null)
+  const count = ref<string | null>(null)
 </script>
 
 <style lang="scss" scoped></style>

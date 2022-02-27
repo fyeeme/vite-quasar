@@ -8,9 +8,9 @@
 </template>
 
 <script setup lang="ts">
-  defineProps<{ modelValue: number | null }>()
+  defineProps<{ modelValue: string | null }>()
   const emit = defineEmits<{
-    (event: 'update:modelValue', value: number): number
+    (event: 'update:modelValue', value: string): string
   }>()
   const updateValue = (event: any) => {
     emit('update:modelValue', event.target.value)
