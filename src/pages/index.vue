@@ -12,7 +12,7 @@
     <HelloWorld :msg="t('index.msg')" />
     22
     {{ count }}
-    <CustomInput v-model="count" />
+    <AsyncInput v-model="count" />
   </div>
 </template>
 
@@ -22,8 +22,13 @@
   import { matLanguage } from '@quasar/extras/material-icons'
   import { userApi } from 'src/api/user'
   import HelloWorld from 'src/components/HelloWorld.vue'
-  import CustomInput from 'src/components/CustomInput.vue'
+  import { defineAsyncComponent } from 'vue'
   import { ref } from 'vue'
+
+  // import CustomInput from 'src/components/CustomInput.vue'
+  //Async Components
+  const AsyncInput = defineAsyncComponent(() => import('src/components/CustomInput.vue'))
+
   interface User {
     name: string
     age: number
