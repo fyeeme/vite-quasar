@@ -10,6 +10,9 @@
 
     <img alt="Vue logo" src="/src/assets/img/logo.png" @click="getUser" />
     <HelloWorld :msg="t('index.msg')" />
+    22
+    {{ count }}
+    <CustomInput v-model="count" />
   </div>
 </template>
 
@@ -19,7 +22,8 @@
   import { matLanguage } from '@quasar/extras/material-icons'
   import { userApi } from 'src/api/user'
   import HelloWorld from 'src/components/HelloWorld.vue'
-
+  import CustomInput from 'src/components/CustomInput.vue'
+  import { ref } from 'vue'
   interface User {
     name: string
     age: number
@@ -34,6 +38,8 @@
       emit('update', user)
     })
   }
+
+  const count = ref<number | null>(null)
 </script>
 
 <style lang="scss" scoped></style>
