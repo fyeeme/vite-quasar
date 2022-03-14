@@ -11,11 +11,11 @@
     "@unocss/reset": "^0.20.4",
     "axios": "^0.24.0",
     "pinia": "^2.0.11",
-    "quasar": "^2.5.5",
+    "quasar": "^2.6.0",
     "velocity-animate": "^1.5.2",
     "vue": "^3.2.31",
     "vue-i18n": "^9.1.9",
-    "vue-router": "^4.0.13"
+    "vue-router": "^4.0.14"
   },
   "devDependencies": {
     "@intlify/vite-plugin-vue-i18n": "^3.3.1",
