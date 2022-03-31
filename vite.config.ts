@@ -46,11 +46,6 @@ export default defineConfig({
     },
   },
   build: {
-    terserOptions: {
-      compress: {
-        drop_console: true,
-      },
-    },
     // reportCompressedSize: true,
     chunkSizeWarningLimit: 1024,
     rollupOptions: {
