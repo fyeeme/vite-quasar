@@ -5,4 +5,4 @@ dist-ssr
 *.local
 .vscode
 .idea
-.pnpm-lock.yaml
+pnpm-lock.yaml

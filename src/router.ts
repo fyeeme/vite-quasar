@@ -5,11 +5,11 @@ import { setupLayouts } from 'virtual:generated-layouts'
 const routes: RouteRecordRaw[] = setupLayouts(generatedRoutes)
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 })
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((_to, _from, next) => {
   next()
 })
 export default router

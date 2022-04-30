@@ -32,6 +32,19 @@ This starter template also includes an plain :
 some of the other are existed to use for improving your efficiency when use vue. they are waiting for discovered.
 
 
+## Checklist
+
+When you use this template, try follow the checklist to update your info properly
+
+- [ ] Change the name and version in `package.json`
+- [ ] Change the title in `index.html`
+- [ ] Change the hostname in `vite.config.ts`
+- [ ] Change the favicon in `public`
+- [ ] Clean up the READMEs and remove routes
+- [ ] Clean up `layouts` and `pages` folder
+
+And, enjoy :)
+
 ## HOW TO USE 
 
 pnpm is recommended to use. also you use npm two.
@@ -47,3 +60,5 @@ or
 npm install 
 npm run dev
 ```
+
+
