@@ -3,10 +3,12 @@ import App from './App.vue'
 
 import 'uno.css'
 import '@unocss/reset/tailwind.css'
+import 'src/styles/main.css'
 
 const app = createApp(App)
+const modules = import.meta.globEager('/src/modules/*.ts')
 
 // install all modules under `modules/`
-Object.values(import.meta.globEager('/src/modules/*.ts')).forEach((module) => module.install?.(app))
+Object.values(modules).forEach((module) => module.install?.(app))
 
 app.mount('#app')

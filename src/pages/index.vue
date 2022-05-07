@@ -10,7 +10,7 @@
 
     <img alt="Vue logo" src="/src/assets/img/logo.png" @click="getUser" />
     <HelloWorld :msg="t('index.msg')" />
-    22
+    <span class="accent-color"> 22 </span>
     {{ count }}
     <AsyncInput v-model="count" />
   </div>
