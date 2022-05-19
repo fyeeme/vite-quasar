@@ -1,3 +1,7 @@
+<img src="src/assets/img/jetbrain_beam.png"  width="200px">
+
+Many thanks for [JetBrains](https://jb.gg/OpenSourceSupport) Open Source Development license for this project.
+
 ## `Vite 2.x + Vue 3.x + quasar 2.x starter ⚡`
 
 **offical quasar vite cli is release.🌹** ,and you can go to official web site for more detail. then this branch will be 
