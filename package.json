@@ -7,11 +7,11 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@quasar/extras": "^1.13.6",
+    "@quasar/extras": "^1.14.0",
     "@unocss/reset": "^0.33.5",
     "axios": "^0.27.2",
     "pinia": "^2.0.14",
-    "quasar": "^2.6.6",
+    "quasar": "^2.7.0",
     "velocity-animate": "^1.5.2",
     "vue": "^3.2.33",
     "vue-i18n": "^9.1.10",
