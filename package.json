@@ -10,6 +10,8 @@
     "@quasar/extras": "^1.14.0",
     "@unocss/reset": "^0.33.5",
     "axios": "^0.27.2",
+    "nanoid": "^3.3.4",
+    "oauth-pkce": "^0.0.6",
     "pinia": "^2.0.14",
     "quasar": "^2.7.1",
     "velocity-animate": "^1.5.2",
