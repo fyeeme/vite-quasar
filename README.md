@@ -24,6 +24,7 @@ This starter template also includes an plain :
 - [x]  - api base axios
 - [x]  - pina as default state management
 - [x]  - backend service write in sprint boot**Coming soon**]
+- [x]  - auth2 login with [spring authorization server](https://github.com/fyeeme/spring-cloud-example) 
 
 ## FAQ 
 1. why not use [Windi CSS](https://github.com/windicss/windicss) or [Tailwind css](https://github.com/tailwindlabs/tailwindcss)? 

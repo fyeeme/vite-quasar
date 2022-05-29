@@ -1,0 +1,31 @@
+POST  http://localhost:9000/oauth2/token?client_id=messaging-client&redirect_uri=http://127.0.0.1:3000/authorized&grant_type=authorization_code&code=k01uz59EW3adeKShJ6x8_PXr8KdbrQKJU4758eyIZDU-ouW3ixMn4OOQ7xvPBR3o_WxUU0w_OcanbqAvNpMjAmb05fMG307NjaiRRGTPPOBNTmz_OIGHlnRGh4r2koNf HTTP/1.1
+Content-Type: application/json
+Authorization: Basic bWVzc2FnaW5nLWNsaWVudDpzZWNyZXQ=
+
+###
+GET 
+http://localhost:9000/oauth2/authorize?response_type=code&client_id=messaging-client&scope=openid&state=some-state&redirect_uri=http://127.0.0.1:3000/authorized  
+HTTP/1.1
+Cookie: JSESSIONID=76D78A9BCF2949CA8D5985B7C5339448
+
+###
+GET http://localhost:8090/messages/2 HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJraWQiOiJlMDViOWU0MS04OTU2LTQwMGItODlhZi05NTkyZjdkMTk0YTMiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJ1c2VyMSIsImF1ZCI6Im1lc3NhZ2luZy1jbGllbnQiLCJhenAiOiJtZXNzYWdpbmctY2xpZW50IiwiaXNzIjoiaHR0cDpcL1wvbG9jYWxob3N0OjkwMDAiLCJleHAiOjE2NTM3Njc0MTUsImlhdCI6MTY1Mzc2NTYxNX0.26E29mfIm_0umreJ3zzZ2WDMzKQEN2PWfLWq7kFAZcxQbiEW-pCFjXAo942cfy_c6xuT_jsRYCm2nMB1AP9S_aMSndW-CU-VwHc_dKvNADt_6Gryr3T5Q89_4NW6727PUvTobt3AQ4h4ho1nZS6BoHagMI3vd6PnYrntTjcBjHB0RNdbkvMCBjDd8KyCicRF7siuZSGu1SAfqwNtqPVX6Tkuq-ZsNuUDBpwVN5ExHsj9WziFWBgdbQVaJNjx6kDF6-WHxUoGRYOkQRxqDvVGYzxZef6JRQ4ZM6AstaOpsAgAtnhZjPnB6l24hkVvVUkxHkSO6o-GVTt3URhKT04K_A
+
+###
+
+get 
+http://localhost:9000/oauth2/authorize?response_type=code&client_id=messaging-client&scope=openid&code_challenge=QYPAZ5NU8yvtlQ9erXrUYR-T5AGCjCF47vN-KsaI2A8&code_challenge_method=S256&redirect_uri=http://127.0.0.1:3000/authorized
+
+http://localhost:9000/oauth2/authorize?response_type=code&client_id=messaging-client&scope=openid&state=some-state&redirect_uri=http://127.0.0.1:3000/authorized
+
+post 
+http://localhost:9000/oauth2/token?client_id=messaging-client&redirect_uri=http://127.0.0.1:3000/authorized&grant_type=authorization_code&code=kTf0y6cukMT_b_fKUPoH-nM04XDrokzPy0-JFXxsrMFSj-f_KnBoqW9RZpqtAbaIAjIgLpxyp0avo65IWtAepjZ754yl7BJdoGbyeifXtLkzmjZjAjqt4fLnAvDO5bdf
+Authorization: Basic btoa("messaging-client:secret")
+
+
+
+const redirectUrl = `http://127.0.0.1:3000/authorized&grant_type=authorization_code&code=${code}&code_verifier=qPsH306-ZDDaOE8DFzVn05TkN3ZZoVmI_6x4LsVglQI`;
+    return `http://localhost:8080/oauth2/token?client_id=client&redirect_uri=${redirectUrl}`;
