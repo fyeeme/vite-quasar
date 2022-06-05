@@ -49,6 +49,12 @@ export default defineConfig({
         secure: false,
         rewrite: (path) => path.replace(/^\/v2\/api/, ''),
       },
+      '/v3/api': {
+        target: 'http://localhost:8090',
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/v3\/api/, ''),
+      },
     },
   },
   build: {
