@@ -130,14 +130,23 @@
   }
 
   const getUserInfo = () => {
-    api.get('/v3/api/users/oidc-principal', {
+    api.get('/v3/api/message/2', {
       headers: {
         //TODO config
-        Authorization: `Basic ${oauthToken.value.id_token}`,
+        Authorization: `Bearer ${oauthToken.value.access_token}`,
       },
     }).then(res => {
       console.log(139, res)
     })
+    api.get('/v3/api/users/oidc-principal', {
+      headers: {
+        //TODO config
+        Authorization: `Bearer ${oauthToken.value.access_token}`,
+      },
+    }).then(res => {
+      console.log(139, res)
+    })
+
   }
 </script>
 
