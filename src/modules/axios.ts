@@ -1,6 +1,14 @@
 import router from 'src/router'
-import axios from 'axios'
+import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { LocalStorage, Notify } from 'quasar'
+
+
+export interface HttpResponse<T = unknown> {
+  data: T,
+  code: string,
+  status: string,
+  message?: string
+}
 
 // replace this with i18n
 const lang: string[] = []
@@ -22,30 +30,28 @@ const parseError = (result: any) => {
   }
 }
 
-const api = axios.create({})
+const api: AxiosInstance = axios.create({})
 
-api.interceptors.request.use((req) => {
+api.interceptors.request.use((req: AxiosRequestConfig) => {
   //Authorization should be processed here
   return req
 })
 
-/**
- *  {
- *   code : 200
- *   data: {}
- *  }
- */
 api.interceptors.response.use(
-  (res) => {
-    console.log('interceptors response', res)
-    return res.data
+  (res: AxiosResponse<HttpResponse>) => {
+    if (res.data?.status === 'success') {
+      return res.data
+    }
+    // business login error can be processed here
+    parseError(res)
+    return Promise.reject(res)
   },
+
   async (err) => {
-    //login info 401,can be processed here
     const response = err.response
     parseError(response.data)
     return Promise.reject(response)
-  }
+  },
 )
 
 export { api, axios }
