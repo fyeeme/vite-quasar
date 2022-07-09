@@ -10,7 +10,6 @@ export const useUserStore = defineStore('user', () => {
 
   const userIds = computed(() => Array.from(previousIds.value))
   const otherIds = computed(() => userIds.value.filter((name) => name !== savedId.value))
-
   /**
    * Changes the current name of the user and saves the one that was used
    * before.

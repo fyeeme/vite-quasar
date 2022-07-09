@@ -2,11 +2,10 @@ import router from 'src/router'
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { LocalStorage, Notify } from 'quasar'
 
-
 export interface HttpResponse<T = unknown> {
-  data: T,
-  code: string,
-  status: string,
+  data: T
+  code: string
+  status: string
   message?: string
 }
 
@@ -14,11 +13,11 @@ export interface HttpResponse<T = unknown> {
 const lang: string[] = []
 const parseError = (result: any) => {
   if (result.status === 401) {
-    LocalStorage.set('lastUrl', router.currentRoute.value.fullPath)
+    LocalStorage.set('lastUrl', router.currentRoute.fullPath)
     setTimeout(() => {
       router.push({
         name: 'login',
-        params: { redirect: router.currentRoute.value.fullPath },
+        params: { redirect: router.currentRoute.fullPath },
       })
     }, 350)
   } else {
@@ -51,7 +50,7 @@ api.interceptors.response.use(
     const response = err.response
     parseError(response.data)
     return Promise.reject(response)
-  },
+  }
 )
 
 export { api, axios }
