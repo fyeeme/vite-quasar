@@ -27,7 +27,6 @@
     </q-drawer>
 
     <q-page-container>
-      <div class="py-2 mx-auto text-center text-sm">[Default Layout]</div>
       <router-view v-slot="{ Component }">
         <transition name="slide-fade" mode="out-in">
           <component :is="Component" />

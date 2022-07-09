@@ -30,7 +30,3 @@
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 160px), 0 100%);
   }
 </style>
-<route lang="yaml">
-meta:
-  layout: blank
-</route>
