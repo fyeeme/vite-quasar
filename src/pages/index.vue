@@ -37,27 +37,15 @@
 </template>
 
 <script setup lang="ts">
-  import { LocalStorage } from 'quasar'
   import { ref } from 'vue'
+  import { LocalStorage } from 'quasar'
   import { useRouter } from 'vue-router'
-  import { useFlatRoutes } from 'src/composables/flatRoute'
+  import { flatRoutes } from 'src/utils/util'
+
   const router = useRouter()
   const generatedRoutes: any = LocalStorage.getItem('routes')
 
-  // const flatRoutes = (origins: any, start: any[]) => {
-  //   return origins.reduce((pre: any, cal: any) => {
-  //     if (cal.path) {
-  //       if (cal.children) {
-  //         return flatRoutes(cal.children, pre)
-  //       } else {
-  //         pre.push(cal)
-  //       }
-  //     }
-  //     return pre
-  //   }, start)
-  // }
-
-  const routes = useFlatRoutes(generatedRoutes, [])
+  const routes = flatRoutes(generatedRoutes, [])
   console.log(routes)
 
   const leftDrawerOpen = ref<boolean>(false)

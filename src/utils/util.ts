@@ -1,8 +1,8 @@
-export function useFlatRoutes(origins: any, start: any[]) {
+export const flatRoutes = (origins: any, start: any[]): any[] => {
   return origins.reduce((pre: any, cal: any) => {
     if (cal.path) {
       if (cal.children) {
-        return useFlatRoutes(cal.children, pre)
+        return flatRoutes(cal.children, pre)
       } else {
         pre.push(cal)
       }

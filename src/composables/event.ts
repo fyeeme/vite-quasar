@@ -1,13 +1,13 @@
-import { onMounted, onUnmounted } from 'vue'
+import { onUnmounted } from 'vue'
 
 export function useEventListener(
   target: EventTarget | undefined | null,
   event: string,
   callback: EventListenerOrEventListenerObject
 ) {
-  target?.addEventListener(event, callback, true)
-  onUnmounted(() => {
-    target?.removeEventListener(event, callback, true)
-    console.log(16, target, callback)
-  })
+  if (target) {
+    target.addEventListener(event, callback)
+    document.addEventListener(event, callback)
+  }
+  onUnmounted(() => target?.removeEventListener(event, callback, true))
 }
