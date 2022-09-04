@@ -11,7 +11,7 @@ import VueI18n from '@intlify/vite-plugin-vue-i18n'
 export default defineConfig({
   plugins: [
     vue({ template: { transformAssetUrls } }),
-    quasar({ sassVariables: 'src/assets/style/quasar-variables.sass' }),
+    quasar({ sassVariables: 'src/styles/variables.sass' }),
     Pages({
       nuxtStyle: true,
       dirs: [
@@ -24,7 +24,7 @@ export default defineConfig({
       presets: [presetUno()],
     }),
     VueI18n({
-      include: resolve(__dirname, './src/locales/**'),
+      include: resolve(__dirname, 'src/locales/**'),
     }),
   ],
   resolve: {
