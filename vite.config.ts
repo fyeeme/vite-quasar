@@ -3,18 +3,23 @@ import { defineConfig } from 'vite'
 import { quasar, transformAssetUrls } from '@quasar/vite-plugin'
 import vue from '@vitejs/plugin-vue'
 import Unocss from 'unocss/vite'
+import Pages from 'vite-plugin-pages'
+import Layouts from 'vite-plugin-vue-layouts'
 import { presetUno } from 'unocss'
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
-import VueRouter from 'unplugin-vue-router/vite'
 
 export default defineConfig({
   plugins: [
     vue({ template: { transformAssetUrls } }),
-    quasar({ sassVariables: 'src/styles/variables.sass' }),
-    VueRouter({
-      dts: './typed-router.d.ts',
-      routesFolder: 'src/pages',
+    quasar({ sassVariables: 'src/assets/style/quasar-variables.sass' }),
+    Pages({
+      nuxtStyle: true,
+      dirs: [
+        { dir: 'src/pages', baseRoute: '' },
+        { dir: 'src/pages/blank', baseRoute: '' },
+      ],
     }),
+    Layouts(),
     Unocss({
       presets: [presetUno()],
     }),
@@ -37,11 +42,6 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, ''),
-        configure: (proxy, options) => {
-          proxy.on('proxyReq', (proxyReq, req) => {
-            //  proxyReq.setHeader('domain', req.headers.host?.split(':')?.at(0) || '')
-          })
-        },
       },
       '/v2/api': {
         target: 'http://localhost:9000',

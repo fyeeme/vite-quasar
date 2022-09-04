@@ -1,71 +1,50 @@
 <template>
-  <q-layout view="hHh lpR fFf">
-    <q-header elevated class="bg-primary text-white text-left">
-      <q-toolbar>
-        <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
-
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" />
-          </q-avatar>
-          Title
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-header>
-
-    <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
-      <!-- drawer content -->
-      <div bordered separator class="min-w-25 pa-4">
-        <template v-for="(item, index) in routes">
-          <div
-            class="cursor-pointer ml-4 py-2 border-b border-stone-200"
-            @click="router.push({ name: item.name })">
-            {{ item.name }}
-          </div>
+  <div class="column flex-center pa-4">
+    <div class="w-20% text-right">
+      <q-select v-model="locale" :options="availableLocales" label="choose your language">
+        <template v-slot:prepend>
+          <q-icon :name="matLanguage" />
         </template>
-      </div>
-    </q-drawer>
+      </q-select>
+    </div>
 
-    <q-page-container>
-      <router-view v-slot="{ Component }">
-        <transition name="slide-fade" mode="out-in">
-          <component :is="Component" />
-        </transition>
-      </router-view>
-    </q-page-container>
-  </q-layout>
+    <img alt="Vue logo" src="/src/assets/img/logo.png" @click="getUser" />
+    <HelloWorld :msg="t('index.msg')" />
+    <span class="accent-color"> 22 </span>
+    {{ count }}
+    <AsyncInput v-model="count" />
+  </div>
 </template>
 
-<script setup lang="ts">
+<script setup="props, { emit }" lang="ts">
+  import { useI18n } from 'vue-i18n'
+
+  import { matLanguage } from '@quasar/extras/material-icons'
+  import { userApi } from 'src/api/user'
+  import HelloWorld from 'src/components/HelloWorld.vue'
+  import { defineAsyncComponent } from 'vue'
   import { ref } from 'vue'
-  import { LocalStorage } from 'quasar'
-  import { useRouter } from 'vue-router'
-  import { flatRoutes } from 'src/utils/util'
 
-  const router = useRouter()
-  const generatedRoutes: any = LocalStorage.getItem('routes')
+  // import CustomInput from 'src/components/CustomInput.vue'
+  //Async Components
+  const AsyncInput = defineAsyncComponent(() => import('src/components/CustomInput.vue'))
 
-  const routes = flatRoutes(generatedRoutes, [])
-  console.log(routes)
-
-  const leftDrawerOpen = ref<boolean>(false)
-  const toggleLeftDrawer = () => {
-    leftDrawerOpen.value = !leftDrawerOpen.value
+  interface User {
+    name: string
+    age: number
   }
+
+  const { t, locale, availableLocales } = useI18n()
+  const emit = defineEmits(['update'])
+
+  const getUser = (): void => {
+    userApi.get(2).then((res) => {
+      const user: User = res.data
+      emit('update', user)
+    })
+  }
+
+  const count = ref<string | null>(null)
 </script>
-<style lang="scss">
-  .slide-fade-enter {
-    transform: translateX(10px);
-    opacity: 0;
-  }
 
-  .slide-fade-enter-active,
-  .slide-fade-leave-active {
-    transition: all 0.2s ease;
-  }
-
-  .slide-fade-leave-to {
-    transform: translateX(-10px);
-    opacity: 0;
-  }
-</style>
+<style lang="scss" scoped></style>

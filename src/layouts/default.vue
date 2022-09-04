@@ -15,24 +15,15 @@
 
     <q-drawer show-if-above v-model="leftDrawerOpen" side="left" bordered>
       <!-- drawer content -->
-      <div bordered separator class="min-w-25 pa-4">
-        <template v-for="(item, index) in useRoutes">
-          <!-- {{ item }} -->
-          <div clickable :key="index" v-if="item.name != 'index'" class="flex-col">
-            <template v-if="item.children">
-              <div
-                class="cursor-pointer py-2"
-                @click="router.push({ name: subitem.name })"
-                v-for="subitem in item.children">
-                {{ subitem.name }}
-              </div>
-            </template>
-            <div v-else class="cursor-pointer ml-4 py-2" @click="router.push({ name: item.name })">
+      <q-list bordered separator class="min-w-25 pa-4">
+        <template v-for="(item, index) in generatedRoutes">
+          <q-item clickable :key="index" v-if="item.name != 'index'" class="flex-col">
+            <q-item-section class="cursor-pointer" @click="router.push({ path: item.path })">
               {{ item.name }}
-            </div>
-          </div>
+            </q-item-section>
+          </q-item>
         </template>
-      </div>
+      </q-list>
     </q-drawer>
 
     <q-page-container>
@@ -47,15 +38,11 @@
 </template>
 
 <script setup lang="ts">
-  import { RouteRecordRaw } from '@vue-router'
-  import { LocalStorage } from 'quasar'
-  // import { useRouteInstances } from 'src/stores/route'
   import { ref } from 'vue'
   import { useRouter } from 'vue-router'
-  // const useRoutes = useRouteInstances()
-  // import generatedRoutes from '~pages'
+
+  import generatedRoutes from '~pages'
   const router = useRouter()
-  const useRoutes: RouteRecordRaw[] | null = LocalStorage.getItem('routes')
 
   const leftDrawerOpen = ref<boolean>(false)
   const toggleLeftDrawer = () => {
